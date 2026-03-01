@@ -359,10 +359,13 @@ class Orchestrator:
             # Count items in each folder
             needs_action_count = len(list(self.needs_action.glob('*.md')))
             pending_approval_count = len(list(self.pending_approval.glob('*.md')))
+            approved_count = len(list(self.approved.glob('*.md')))
+            inbox_count = len(list(self.inbox.glob('*.txt'))) + len(list(self.inbox.glob('*.md')))
             done_today = len([
                 f for f in self.done.glob('*.md')
                 if self._is_today(f)
             ])
+            done_total = len(list(self.done.glob('*.md')))
 
             # Get recent activity
             recent = self._get_recent_activity()
@@ -377,32 +380,21 @@ class Orchestrator:
                     content, 'last_updated', datetime.now().isoformat()
                 )
 
-                # Update stats (simple string replacement for Bronze tier)
-                content = self._replace_dashboard_value(
-                    content, 'Pending Tasks', str(needs_action_count)
-                )
-                content = self._replace_dashboard_value(
-                    content, 'Awaiting Approval', str(pending_approval_count)
-                )
-                content = self._replace_dashboard_value(
-                    content, 'Completed Today', str(done_today)
-                )
+                # Update Quick Stats section
+                content = self._replace_table_value(content, 'Pending Tasks', str(needs_action_count))
+                content = self._replace_table_value(content, 'Awaiting Approval', str(pending_approval_count))
+                content = self._replace_table_value(content, 'Completed Today', str(done_today))
 
-                # Update folder counts
-                content = self._replace_dashboard_value(
-                    content, '/Needs_Action', str(needs_action_count),
-                    context='| /Needs_Action |'
-                )
-                content = self._replace_dashboard_value(
-                    content, '/Pending_Approval', str(pending_approval_count),
-                    context='| /Pending_Approval |'
-                )
+                # Update Inbox Status section
+                content = self._replace_table_value(content, '/Inbox', str(inbox_count), exact_match=True)
+                content = self._replace_table_value(content, '/Needs_Action', str(needs_action_count), exact_match=True)
+                content = self._replace_table_value(content, '/Pending_Approval', str(pending_approval_count), exact_match=True)
 
                 self.dashboard.write_text(content, encoding='utf-8')
-                self.logger.debug('Dashboard updated')
-            
+                self.logger.info(f'Dashboard updated: NA={needs_action_count}, PA={pending_approval_count}, Done={done_today}')
+
         except Exception as e:
-            self.logger.error(f'Error updating dashboard: {e}')
+            self.logger.error(f'Error updating dashboard: {e}', exc_info=True)
     
     def _get_recent_activity(self) -> List[Dict[str, str]]:
         """Get recent activity from Done folder."""
@@ -487,27 +479,35 @@ class Orchestrator:
         return '\n'.join(new_lines)
     
     @staticmethod
-    def _replace_dashboard_value(content: str, label: str, value: str, 
-                                  context: str = None) -> str:
-        """Replace a value in the dashboard."""
-        if context:
-            # Replace within specific context
-            old_pattern = f'{context} {value}'
-            new_pattern = f'{context} {value}'
-            if context in content:
-                lines = content.split('\n')
-                new_lines = []
-                for line in lines:
-                    if context in line:
-                        parts = line.split('|')
-                        if len(parts) >= 3:
-                            parts[-2] = f' {value} '
-                            line = '|'.join(parts)
-                    new_lines.append(line)
-                return '\n'.join(new_lines)
+    def _replace_table_value(content: str, label: str, value: str,
+                              context: str = None, exact_match: bool = False) -> str:
+        """Replace a value in the dashboard table."""
+        lines = content.split('\n')
+        new_lines = []
         
-        return content
-    
+        for line in lines:
+            if '|' in line and label in line:
+                # This is a table row containing the label
+                parts = line.split('|')
+                if exact_match:
+                    # Exact match for folder paths like /Inbox, /Needs_Action
+                    for i, part in enumerate(parts):
+                        if part.strip() == label:
+                            # Next cell should be the value
+                            if i + 1 < len(parts):
+                                parts[i + 1] = f' {value} '
+                                break
+                else:
+                    # For other labels, find and replace value in next cell
+                    for i, part in enumerate(parts):
+                        if label in part and i + 1 < len(parts):
+                            parts[i + 1] = f' {value} '
+                            break
+                line = '|'.join(parts)
+            new_lines.append(line)
+        
+        return '\n'.join(new_lines)
+
     @staticmethod
     def _is_today(file_path: Path) -> bool:
         """Check if file was modified today."""
