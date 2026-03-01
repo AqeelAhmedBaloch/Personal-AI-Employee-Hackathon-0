@@ -1,0 +1,86 @@
+2026-03-01 12:23:22,735 - FileSystemWatcher - INFO - FileSystemWatcher initialized
+2026-03-01 12:23:22,736 - FileSystemWatcher - INFO - Vault path: .
+2026-03-01 12:23:22,736 - FileSystemWatcher - INFO - Check interval: 5s
+2026-03-01 12:23:22,737 - FileSystemWatcher - INFO - Drop folder: Drop_Folder
+2026-03-01 12:23:22,737 - FileSystemWatcher - INFO - Starting FileSystemWatcher with real-time observer
+2026-03-01 12:23:22,739 - FileSystemWatcher - INFO - Watching folder: Drop_Folder
+2026-03-01 12:23:22,740 - FileSystemWatcher - INFO - Press Ctrl+C to stop
+2026-03-01 12:23:22,743 - FileSystemWatcher - INFO - Copied file to vault: Inbox\bronze_test.txt
+2026-03-01 12:23:22,745 - FileSystemWatcher - INFO - Action file created: FILE_bronze_test_20260301_122322.md
+2026-03-01 12:23:22,747 - FileSystemWatcher - INFO - Copied file to vault: Inbox\debug_test.txt
+2026-03-01 12:23:22,750 - FileSystemWatcher - INFO - Action file created: FILE_debug_test_20260301_122322.md
+2026-03-01 12:23:22,751 - FileSystemWatcher - INFO - Copied file to vault: Inbox\fg_test.txt
+2026-03-01 12:23:22,753 - FileSystemWatcher - INFO - Action file created: FILE_fg_test_20260301_122322.md
+2026-03-01 12:23:22,754 - FileSystemWatcher - INFO - Copied file to vault: Inbox\final_test.txt
+2026-03-01 12:23:22,756 - FileSystemWatcher - INFO - Action file created: FILE_final_test_20260301_122322.md
+2026-03-01 12:23:22,757 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test2.txt
+2026-03-01 12:23:22,759 - FileSystemWatcher - INFO - Action file created: FILE_test2_20260301_122322.md
+2026-03-01 12:23:22,761 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test_document.txt
+2026-03-01 12:23:22,762 - FileSystemWatcher - INFO - Action file created: FILE_test_document_20260301_122322.md
+2026-03-01 12:24:53,323 - FileSystemWatcher - INFO - File created: Drop_Folder\qwen_test.txt
+2026-03-01 12:24:53,323 - FileSystemWatcher - INFO - Processing file: qwen_test.txt
+2026-03-01 12:24:53,325 - FileSystemWatcher - INFO - Copied file to vault: Inbox\qwen_test.txt
+2026-03-01 12:24:53,327 - FileSystemWatcher - INFO - Action file created: FILE_qwen_test_20260301_122453.md
+2026-03-01 12:29:29,323 - FileSystemWatcher - INFO - FileSystemWatcher initialized
+2026-03-01 12:29:29,324 - FileSystemWatcher - INFO - Vault path: .
+2026-03-01 12:29:29,324 - FileSystemWatcher - INFO - Check interval: 5s
+2026-03-01 12:29:29,324 - FileSystemWatcher - INFO - Drop folder: Drop_Folder
+2026-03-01 12:29:29,325 - FileSystemWatcher - INFO - Starting FileSystemWatcher with real-time observer
+2026-03-01 12:29:29,327 - FileSystemWatcher - INFO - Watching folder: Drop_Folder
+2026-03-01 12:29:29,327 - FileSystemWatcher - INFO - Press Ctrl+C to stop
+2026-03-01 12:29:29,330 - FileSystemWatcher - INFO - Copied file to vault: Inbox\bronze_test.txt
+2026-03-01 12:29:29,331 - FileSystemWatcher - INFO - Action file created: FILE_bronze_test_20260301_122929.md
+2026-03-01 12:29:29,332 - FileSystemWatcher - INFO - Copied file to vault: Inbox\debug_test.txt
+2026-03-01 12:29:29,334 - FileSystemWatcher - INFO - Action file created: FILE_debug_test_20260301_122929.md
+2026-03-01 12:29:29,335 - FileSystemWatcher - INFO - Copied file to vault: Inbox\fg_test.txt
+2026-03-01 12:29:29,336 - FileSystemWatcher - INFO - Action file created: FILE_fg_test_20260301_122929.md
+2026-03-01 12:29:29,337 - FileSystemWatcher - INFO - Copied file to vault: Inbox\final_test.txt
+2026-03-01 12:29:29,342 - FileSystemWatcher - INFO - Action file created: FILE_final_test_20260301_122929.md
+2026-03-01 12:29:29,346 - FileSystemWatcher - INFO - Copied file to vault: Inbox\qwen_test.txt
+2026-03-01 12:29:29,347 - FileSystemWatcher - INFO - Action file created: FILE_qwen_test_20260301_122929.md
+2026-03-01 12:29:29,349 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test2.txt
+2026-03-01 12:29:29,351 - FileSystemWatcher - INFO - Action file created: FILE_test2_20260301_122929.md
+2026-03-01 12:29:29,352 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test_document.txt
+2026-03-01 12:29:29,354 - FileSystemWatcher - INFO - Action file created: FILE_test_document_20260301_122929.md
+2026-03-01 12:31:10,847 - FileSystemWatcher - INFO - File created: Drop_Folder\test.txt
+2026-03-01 12:31:10,848 - FileSystemWatcher - INFO - Processing file: test.txt
+2026-03-01 12:31:10,853 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test.txt
+2026-03-01 12:31:10,855 - FileSystemWatcher - INFO - Action file created: FILE_test_20260301_123110.md
+2026-03-01 12:38:01,794 - FileSystemWatcher - INFO - FileSystemWatcher initialized
+2026-03-01 12:38:01,794 - FileSystemWatcher - INFO - Vault path: .
+2026-03-01 12:38:01,795 - FileSystemWatcher - INFO - Check interval: 5s
+2026-03-01 12:38:01,795 - FileSystemWatcher - INFO - Drop folder: Drop_Folder
+2026-03-01 12:38:01,795 - FileSystemWatcher - INFO - Starting FileSystemWatcher with real-time observer
+2026-03-01 12:38:01,797 - FileSystemWatcher - INFO - Watching folder: Drop_Folder
+2026-03-01 12:38:01,797 - FileSystemWatcher - INFO - Press Ctrl+C to stop
+2026-03-01 12:38:01,800 - FileSystemWatcher - INFO - Copied file to vault: Inbox\bronze_test.txt
+2026-03-01 12:38:01,801 - FileSystemWatcher - INFO - Action file created: FILE_bronze_test_20260301_123801.md
+2026-03-01 12:38:01,803 - FileSystemWatcher - INFO - Copied file to vault: Inbox\debug_test.txt
+2026-03-01 12:38:01,804 - FileSystemWatcher - INFO - Action file created: FILE_debug_test_20260301_123801.md
+2026-03-01 12:38:01,805 - FileSystemWatcher - INFO - Copied file to vault: Inbox\fg_test.txt
+2026-03-01 12:38:01,809 - FileSystemWatcher - INFO - Action file created: FILE_fg_test_20260301_123801.md
+2026-03-01 12:38:01,811 - FileSystemWatcher - INFO - Copied file to vault: Inbox\final_test.txt
+2026-03-01 12:38:01,812 - FileSystemWatcher - INFO - Action file created: FILE_final_test_20260301_123801.md
+2026-03-01 12:38:01,814 - FileSystemWatcher - INFO - Copied file to vault: Inbox\qwen_test.txt
+2026-03-01 12:38:01,815 - FileSystemWatcher - INFO - Action file created: FILE_qwen_test_20260301_123801.md
+2026-03-01 12:38:01,817 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test.txt
+2026-03-01 12:38:01,818 - FileSystemWatcher - INFO - Action file created: FILE_test_20260301_123801.md
+2026-03-01 12:38:01,821 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test2.txt
+2026-03-01 12:38:01,826 - FileSystemWatcher - INFO - Action file created: FILE_test2_20260301_123801.md
+2026-03-01 12:38:01,828 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test_document.txt
+2026-03-01 12:38:01,829 - FileSystemWatcher - INFO - Action file created: FILE_test_document_20260301_123801.md
+2026-03-01 12:39:56,455 - FileSystemWatcher - INFO - Stopping observer...
+2026-03-01 12:39:56,458 - FileSystemWatcher - INFO - FileSystemWatcher stopped
+2026-03-01 12:54:21,522 - FileSystemWatcher - INFO - FileSystemWatcher initialized
+2026-03-01 12:54:21,523 - FileSystemWatcher - INFO - Vault path: .
+2026-03-01 12:54:21,523 - FileSystemWatcher - INFO - Check interval: 5s
+2026-03-01 12:54:21,524 - FileSystemWatcher - INFO - Drop folder: Drop_Folder
+2026-03-01 12:54:21,525 - FileSystemWatcher - INFO - Starting FileSystemWatcher with real-time observer
+2026-03-01 12:54:21,527 - FileSystemWatcher - INFO - Watching folder: Drop_Folder
+2026-03-01 12:54:21,527 - FileSystemWatcher - INFO - Press Ctrl+C to stop
+2026-03-01 12:54:21,529 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test.txt
+2026-03-01 12:54:21,531 - FileSystemWatcher - INFO - Action file created: FILE_test_20260301_125421.md
+2026-03-01 12:55:49,110 - FileSystemWatcher - INFO - File created: Drop_Folder\perfect_test.txt
+2026-03-01 12:55:49,111 - FileSystemWatcher - INFO - Processing file: perfect_test.txt
+2026-03-01 12:55:49,113 - FileSystemWatcher - INFO - Copied file to vault: Inbox\perfect_test.txt
+2026-03-01 12:55:49,114 - FileSystemWatcher - INFO - Action file created: FILE_perfect_test_20260301_125549.md

@@ -1,0 +1,21 @@
+# AI Employee - Python Dependencies
+# Bronze Tier Requirements
+
+# File system watching (real-time file monitoring)
+watchdog>=4.0.0
+
+# For future Gmail integration
+# google-auth>=2.27.0
+# google-auth-oauthlib>=1.2.0
+# google-auth-httplib2>=0.2.0
+# google-api-python-client>=2.118.0
+
+# For future WhatsApp integration (Playwright-based)
+# playwright>=1.40.0
+
+# For future MCP server development
+# httpx>=0.26.0
+# pydantic>=2.5.0
+
+# Utilities
+python-dotenv>=1.0.0

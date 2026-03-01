@@ -1,0 +1,967 @@
+2026-03-01 10:59:13,723 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 10:59:13,723 - Orchestrator - INFO - Vault: .
+2026-03-01 10:59:13,723 - Orchestrator - INFO - Dev mode: True
+2026-03-01 10:59:13,723 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 10:59:13,724 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 10:59:13,725 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 10:59:43,726 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 10:59:43,726 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 10:59:43,726 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 10:59:43,727 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 10:59:43,728 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:00:13,729 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:00:13,729 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:00:13,729 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:00:13,729 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:00:13,730 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:00:43,737 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:00:43,739 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:00:43,747 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:00:43,748 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:00:43,770 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:01:13,772 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:01:13,772 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:01:13,772 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:01:13,772 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:01:13,773 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:01:43,774 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:01:43,774 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:01:43,774 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:01:43,774 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:01:43,775 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:02:13,777 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:02:13,777 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:02:13,778 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:02:13,778 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:02:13,781 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:02:43,783 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:02:43,784 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:02:43,784 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:02:43,785 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:02:43,788 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:03:13,796 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:03:13,803 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:03:13,804 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:03:13,804 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:03:13,805 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:03:43,807 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:03:43,808 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:03:43,808 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:03:43,808 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:03:43,812 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:04:13,813 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:04:13,813 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:04:13,814 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:04:13,814 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:04:13,816 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:04:43,817 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:04:43,817 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:04:43,818 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:04:43,818 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:04:43,819 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:05:13,820 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:05:13,821 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:05:13,821 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:05:13,821 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:05:13,824 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:05:43,826 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:05:43,826 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:05:43,826 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:05:43,827 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:05:43,829 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:06:13,830 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:06:13,831 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:06:13,831 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:06:13,831 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:06:13,835 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:06:43,837 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:06:43,837 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:06:43,837 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:06:43,837 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:06:43,839 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:07:13,840 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:07:13,840 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:07:13,840 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:07:13,840 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:07:13,842 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:07:43,843 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:07:43,843 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:07:43,843 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:07:43,844 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:07:43,846 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:08:13,848 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:08:13,849 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:08:13,849 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:08:13,850 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:08:13,854 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:08:43,855 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:08:43,856 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:08:43,856 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:08:43,856 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:08:43,859 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:09:13,860 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:09:13,860 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:09:13,860 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:09:13,861 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:09:13,863 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:09:43,865 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:09:43,865 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:09:43,865 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:09:43,866 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:09:43,868 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:10:13,869 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:10:13,870 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:10:13,870 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:10:13,870 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:10:13,872 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:10:43,873 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:10:43,874 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:10:43,874 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:10:43,875 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:10:43,878 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:11:13,880 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:11:13,880 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:11:13,880 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:11:13,881 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:11:13,883 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:11:43,884 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:11:43,884 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:11:43,884 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:11:43,884 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:11:43,885 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:12:13,886 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:12:13,886 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:12:13,886 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:12:13,886 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:12:13,888 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:12:43,889 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:12:43,890 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:12:43,890 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:12:43,890 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:12:43,893 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:13:13,924 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:13:13,924 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:13:13,924 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:13:13,924 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:13:13,926 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:13:43,927 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:13:43,927 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:13:43,927 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:13:43,927 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:13:43,928 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:14:13,930 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:14:13,930 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:14:13,930 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:14:13,930 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:14:13,931 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:14:43,938 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:14:43,938 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:14:43,938 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:14:43,938 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:14:43,939 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:15:13,940 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:15:13,940 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:15:13,940 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:15:13,940 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:15:13,941 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:15:43,942 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:15:43,942 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:15:43,942 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:15:43,942 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:15:43,943 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:16:13,948 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:16:13,949 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:16:13,949 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:16:13,949 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:16:13,951 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:16:43,952 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:16:43,953 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:16:43,953 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:16:43,953 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:16:43,956 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:17:13,958 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:17:13,958 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:17:13,958 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:17:13,959 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:17:13,961 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:17:43,962 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:17:43,963 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:17:43,963 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:17:43,963 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:17:43,966 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:18:13,967 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:18:13,967 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:18:13,967 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:18:13,967 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:18:13,969 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:18:43,970 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:18:43,970 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:18:43,971 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:18:43,971 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:18:43,973 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:19:13,975 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:19:13,975 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:19:13,975 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:19:13,976 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:19:13,978 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:19:43,979 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:19:43,980 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:19:43,980 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:19:43,980 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:19:43,983 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:20:13,983 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:20:13,984 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:20:13,984 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:20:13,984 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:20:13,985 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:20:43,986 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:20:43,987 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:20:43,987 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:20:43,987 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:20:43,989 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:21:13,991 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:21:13,991 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:21:13,992 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:21:13,992 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:21:13,994 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:21:43,995 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:21:43,996 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:21:43,996 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:21:43,996 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:21:43,999 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:22:14,001 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:22:14,001 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:22:14,001 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:22:14,002 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:22:14,004 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:22:44,010 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:22:44,010 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:22:44,010 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:22:44,010 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:22:44,011 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:23:14,012 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:23:14,013 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:23:14,013 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:23:14,013 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:23:14,014 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:23:44,015 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:23:44,015 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:23:44,016 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:23:44,016 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:23:44,018 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:24:14,020 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:24:14,020 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:24:14,020 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:24:14,021 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:24:14,023 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:24:44,024 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:24:44,024 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:24:44,024 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:24:44,024 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:24:44,025 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:24:52,084 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 11:24:52,084 - Orchestrator - INFO - Vault: .
+2026-03-01 11:24:52,084 - Orchestrator - INFO - Dev mode: True
+2026-03-01 11:24:52,085 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 11:24:52,085 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 11:24:52,086 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:24:52,086 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:24:52,086 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:24:52,086 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:24:52,087 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:25:14,027 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:25:14,027 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:25:14,028 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:25:14,028 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:25:14,030 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:25:22,089 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:25:22,089 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:25:22,091 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:25:22,091 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:25:22,094 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:25:44,032 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:25:44,032 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:25:44,032 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:25:44,032 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:25:44,035 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:25:52,096 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:25:52,098 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:25:52,104 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:25:52,107 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:25:52,112 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:26:14,036 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:26:14,036 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:26:14,036 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:26:14,036 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:26:14,037 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:26:22,119 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:26:22,119 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:26:22,122 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:26:22,124 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:26:22,126 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:26:44,038 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:26:44,039 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:26:44,039 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:26:44,040 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:26:44,044 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:26:52,127 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:26:52,128 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:26:52,130 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:26:52,133 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:26:52,135 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:27:14,045 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:27:14,045 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:27:14,045 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:27:14,045 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:27:14,046 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:27:22,136 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:27:22,136 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:27:22,139 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:27:22,140 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:27:22,143 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:27:44,048 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:27:44,048 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:27:44,048 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:27:44,048 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:27:44,051 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:27:52,145 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:27:52,146 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:27:52,152 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:27:52,155 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:27:52,160 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:28:13,849 - Orchestrator - INFO - Orchestrator stopped by user
+2026-03-01 11:28:14,052 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 11:28:14,053 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:28:14,053 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:28:14,053 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:28:14,056 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:28:44,057 - Orchestrator - INFO - Found 2 pending item(s)
+2026-03-01 11:28:44,057 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:28:44,057 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:28:44,057 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:28:44,058 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 490: character maps to <undefined>
+2026-03-01 11:28:48,677 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 11:28:48,678 - Orchestrator - INFO - Vault: .
+2026-03-01 11:28:48,678 - Orchestrator - INFO - Dev mode: True
+2026-03-01 11:28:48,678 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 11:28:48,679 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 11:28:48,679 - Orchestrator - INFO - Found 2 pending item(s)
+2026-03-01 11:28:48,680 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:28:48,680 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:28:48,680 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:29:14,059 - Orchestrator - INFO - Found 2 pending item(s)
+2026-03-01 11:29:14,060 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:29:14,060 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:29:14,060 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:29:14,063 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:29:18,683 - Orchestrator - INFO - Found 2 pending item(s)
+2026-03-01 11:29:18,684 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:29:18,685 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:29:18,686 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:29:44,065 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:29:44,065 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:29:44,066 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:29:44,066 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:29:44,070 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:29:48,694 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:29:48,695 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:29:48,696 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:29:48,699 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:30:14,071 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:30:14,072 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:30:14,072 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:30:14,072 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:30:14,075 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:30:18,707 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:30:18,708 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:30:18,710 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:30:18,713 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:30:44,076 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:30:44,076 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:30:44,076 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:30:44,076 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:30:44,078 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:31:14,079 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:31:14,079 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:31:14,079 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:31:14,079 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:31:14,080 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:31:44,081 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:31:44,081 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:31:44,081 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:31:44,081 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:31:44,083 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:32:14,084 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:32:14,084 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:32:14,085 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:32:14,085 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:32:14,087 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:32:44,089 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:32:44,089 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:32:44,089 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:32:44,090 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:32:44,092 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:33:14,093 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:33:14,094 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:33:14,094 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:33:14,094 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:33:14,097 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:33:44,098 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:33:44,099 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:33:44,099 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:33:44,099 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:33:44,102 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:34:14,103 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:34:14,103 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:34:14,103 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:34:14,104 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:34:14,106 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:34:44,117 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:34:44,117 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:34:44,117 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:34:44,117 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:34:44,118 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:35:14,119 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:35:14,119 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:35:14,119 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:35:14,119 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:35:14,120 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:35:44,121 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:35:44,122 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:35:44,122 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:35:44,122 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:35:44,125 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:36:14,126 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:36:14,126 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:36:14,127 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:36:14,127 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:36:14,128 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:36:44,142 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:36:44,143 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:36:44,143 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:36:44,143 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:36:44,145 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:37:14,146 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:37:14,146 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:37:14,146 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:37:14,147 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:37:14,148 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:37:44,149 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:37:44,149 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:37:44,149 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:37:44,150 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:37:44,152 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:38:14,154 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:38:14,154 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:38:14,154 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:38:14,155 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:38:14,157 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:38:44,158 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:38:44,158 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:38:44,158 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:38:44,158 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:38:44,159 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:39:14,160 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:39:14,161 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:39:14,161 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:39:14,161 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:39:14,164 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:39:44,165 - Orchestrator - INFO - Found 4 pending item(s)
+2026-03-01 11:39:44,166 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:39:44,166 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:39:44,166 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:39:44,168 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:40:14,170 - Orchestrator - INFO - Found 6 pending item(s)
+2026-03-01 11:40:14,170 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:40:14,171 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:40:14,171 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:40:14,174 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:40:44,176 - Orchestrator - INFO - Found 6 pending item(s)
+2026-03-01 11:40:44,176 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:40:44,176 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:40:44,177 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:40:44,179 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:41:14,181 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:41:14,181 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:41:14,181 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:41:14,181 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:41:14,182 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:41:44,184 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:41:44,185 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:41:44,185 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:41:44,186 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:41:44,192 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 496: character maps to <undefined>
+2026-03-01 11:42:14,194 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:42:14,194 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:42:14,195 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:42:14,195 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:42:14,197 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 496: character maps to <undefined>
+2026-03-01 11:42:44,198 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:42:44,199 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:42:44,199 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:42:44,200 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:42:44,203 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 496: character maps to <undefined>
+2026-03-01 11:42:44,569 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 11:42:44,569 - Orchestrator - INFO - Vault: .
+2026-03-01 11:42:44,570 - Orchestrator - INFO - Dev mode: True
+2026-03-01 11:42:44,570 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 11:42:44,570 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 11:42:44,571 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:42:44,571 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:42:44,571 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:42:44,571 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:43:14,204 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:43:14,205 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:43:14,205 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:43:14,205 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:43:14,206 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:43:14,574 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:43:14,575 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:43:14,577 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:43:14,578 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:43:44,207 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:43:44,208 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:43:44,208 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:43:44,208 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:43:44,211 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:43:44,585 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:43:44,585 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:43:44,587 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:43:44,587 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:44:14,212 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:44:14,212 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:44:14,212 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:44:14,212 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:44:14,214 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:44:14,593 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:44:14,594 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:44:14,599 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:44:14,601 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:44:44,215 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:44:44,216 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:44:44,216 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:44:44,216 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:44:44,219 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:44:44,608 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:44:44,609 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:44:44,610 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:44:44,610 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:45:14,221 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:45:14,221 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:45:14,222 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:45:14,222 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:45:14,224 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:45:14,613 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:45:14,614 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:45:14,616 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:45:14,618 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:45:44,226 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:45:44,226 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:45:44,226 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:45:44,227 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:45:44,229 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:46:14,230 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:46:14,231 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:46:14,231 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:46:14,231 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:46:14,232 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:46:19,529 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 11:46:19,530 - Orchestrator - INFO - Vault: .
+2026-03-01 11:46:19,530 - Orchestrator - INFO - Dev mode: True
+2026-03-01 11:46:19,530 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 11:46:19,530 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 11:46:19,531 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:46:19,531 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:46:19,531 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:46:19,531 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:46:44,234 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:46:44,234 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:46:44,234 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:46:44,234 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:46:44,237 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:46:49,534 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 11:46:49,535 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:46:49,536 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:46:49,537 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:47:14,238 - Orchestrator - INFO - Found 9 pending item(s)
+2026-03-01 11:47:14,238 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:47:14,238 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:47:14,239 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:47:14,240 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:47:19,544 - Orchestrator - INFO - Found 9 pending item(s)
+2026-03-01 11:47:19,545 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:47:19,551 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:47:19,554 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:47:44,242 - Orchestrator - INFO - Found 9 pending item(s)
+2026-03-01 11:47:44,242 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:47:44,243 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:47:44,243 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:47:44,245 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:47:49,563 - Orchestrator - INFO - Found 9 pending item(s)
+2026-03-01 11:47:49,564 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:47:49,568 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:47:49,574 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:48:14,247 - Orchestrator - INFO - Found 9 pending item(s)
+2026-03-01 11:48:14,248 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:48:14,248 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:48:14,248 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:48:14,250 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 535: character maps to <undefined>
+2026-03-01 11:48:19,584 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:48:19,585 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:48:19,591 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:48:19,594 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:48:44,252 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:48:44,252 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:48:44,253 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:48:44,253 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:48:44,255 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 536: character maps to <undefined>
+2026-03-01 11:48:49,602 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:48:49,603 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:48:49,607 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:48:49,610 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:49:14,257 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:49:14,258 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:49:14,258 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:49:14,258 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:49:14,261 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 536: character maps to <undefined>
+2026-03-01 11:49:19,616 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:49:19,617 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:49:19,627 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:49:19,630 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:49:44,262 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:49:44,262 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:49:44,263 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:49:44,263 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:49:44,266 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 536: character maps to <undefined>
+2026-03-01 11:49:49,640 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:49:49,640 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:49:49,643 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:49:49,646 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:50:14,268 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:50:14,268 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:50:14,268 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:50:14,269 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:50:14,271 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 536: character maps to <undefined>
+2026-03-01 11:50:19,651 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:50:19,652 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:50:19,658 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:50:19,661 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:50:44,272 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:50:44,273 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:50:44,273 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:50:44,274 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:50:44,277 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 536: character maps to <undefined>
+2026-03-01 11:50:49,673 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:50:49,674 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:50:49,683 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:50:49,686 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:51:14,279 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:51:14,279 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:51:14,279 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:51:14,280 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:51:14,282 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 536: character maps to <undefined>
+2026-03-01 11:51:19,699 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:51:19,700 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:51:19,706 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:51:19,709 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:51:44,284 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:51:44,284 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:51:44,285 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:51:44,285 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 11:51:44,288 - Orchestrator - ERROR - Error updating dashboard: 'charmap' codec can't decode byte 0x8f in position 536: character maps to <undefined>
+2026-03-01 11:51:49,719 - Orchestrator - INFO - Found 13 pending item(s)
+2026-03-01 11:51:49,720 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 11:51:49,725 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 11:51:49,730 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:09:40,955 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 12:09:40,955 - Orchestrator - INFO - Vault: .
+2026-03-01 12:09:40,958 - Orchestrator - INFO - Dev mode: True
+2026-03-01 12:09:40,958 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 12:09:40,961 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 12:09:40,963 - Orchestrator - INFO - Found 28 pending item(s)
+2026-03-01 12:09:40,963 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:09:40,964 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:09:40,965 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:10:10,968 - Orchestrator - INFO - Found 28 pending item(s)
+2026-03-01 12:10:10,969 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:10:10,974 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:10:10,978 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:10:40,987 - Orchestrator - INFO - Found 28 pending item(s)
+2026-03-01 12:10:40,988 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:10:40,990 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:10:41,003 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:11:11,006 - Orchestrator - INFO - Found 28 pending item(s)
+2026-03-01 12:11:11,007 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:11:11,015 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:11:11,020 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:13:04,568 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 12:13:04,569 - Orchestrator - INFO - Vault: .
+2026-03-01 12:13:04,569 - Orchestrator - INFO - Dev mode: True
+2026-03-01 12:13:04,570 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 12:13:04,570 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 12:13:04,571 - Orchestrator - INFO - Found 33 pending item(s)
+2026-03-01 12:13:04,572 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:13:04,572 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:13:04,572 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:13:34,575 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:13:34,575 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:13:34,576 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:13:34,576 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:14:04,580 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:14:04,580 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:14:04,580 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:14:04,581 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:14:34,584 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:14:34,585 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:14:34,586 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:14:34,586 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:15:04,593 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:15:04,594 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:15:04,595 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:15:04,596 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:15:34,602 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:15:34,603 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:15:34,603 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:15:34,604 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:16:04,607 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:16:04,608 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:16:04,611 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:16:04,614 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:16:34,621 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:16:34,621 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:16:34,623 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:16:34,624 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:17:04,653 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:17:04,654 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:17:04,656 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:17:04,657 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:17:34,662 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:17:34,663 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:17:34,665 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:17:34,665 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:18:04,670 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:18:04,670 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:18:04,673 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:18:04,674 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:18:34,678 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:18:34,678 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:18:34,680 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:18:34,682 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:19:04,687 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:19:04,687 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:19:04,689 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:19:04,691 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:19:34,695 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:19:34,695 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:19:34,697 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:19:34,699 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:20:04,703 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:20:04,704 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:20:04,709 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:20:04,711 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:20:34,719 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:20:34,720 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:20:34,722 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:20:34,724 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:21:04,728 - Orchestrator - INFO - Found 34 pending item(s)
+2026-03-01 12:21:04,728 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:21:04,734 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:21:04,736 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:21:34,744 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 12:21:34,744 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:21:34,748 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:21:34,749 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:22:04,754 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 12:22:04,755 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:22:04,758 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:22:04,761 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:22:34,768 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 12:22:34,769 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:22:34,771 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:22:34,771 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:23:04,776 - Orchestrator - INFO - Found 1 pending item(s)
+2026-03-01 12:23:04,776 - Orchestrator - INFO - Triggering Claude Code processing...
+2026-03-01 12:23:04,780 - Orchestrator - INFO - [DEV MODE] Would trigger Claude Code
+2026-03-01 12:23:04,782 - Orchestrator - INFO - [DEV MODE] Run manually: claude -c "Process /Needs_Action folder"
+2026-03-01 12:23:32,284 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 12:23:32,284 - Orchestrator - INFO - Vault: .
+2026-03-01 12:23:32,284 - Orchestrator - INFO - Dev mode: True
+2026-03-01 12:23:32,284 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 12:23:32,285 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 12:23:32,285 - Orchestrator - INFO - Found 7 pending item(s)
+2026-03-01 12:23:32,285 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:23:32,286 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:23:32,286 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:24:02,288 - Orchestrator - INFO - Found 7 pending item(s)
+2026-03-01 12:24:02,288 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:24:02,289 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:24:02,289 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:24:32,292 - Orchestrator - INFO - Found 7 pending item(s)
+2026-03-01 12:24:32,293 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:24:32,294 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:24:32,295 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:25:02,301 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 12:25:02,302 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:25:02,302 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:25:02,303 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:25:32,307 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 12:25:32,308 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:25:32,309 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:25:32,310 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:26:02,315 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 12:26:02,315 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:26:02,316 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:26:02,316 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:26:32,325 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 12:26:32,325 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:26:32,327 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:26:32,327 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:27:02,330 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 12:27:02,336 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:27:02,337 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:27:02,337 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:27:32,340 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 12:27:32,341 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:27:32,342 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:27:32,342 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:28:02,347 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 12:28:02,348 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:28:02,351 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:28:02,352 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:28:32,358 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 12:28:32,359 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:28:32,360 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:28:32,360 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:29:02,364 - Orchestrator - INFO - Found 8 pending item(s)
+2026-03-01 12:29:02,365 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:29:02,368 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:29:02,369 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:29:32,375 - Orchestrator - INFO - Found 15 pending item(s)
+2026-03-01 12:29:32,376 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:29:32,379 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:29:32,380 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:29:51,382 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 12:29:51,382 - Orchestrator - INFO - Vault: .
+2026-03-01 12:29:51,383 - Orchestrator - INFO - Dev mode: True
+2026-03-01 12:29:51,383 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 12:29:51,383 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 12:29:51,384 - Orchestrator - INFO - Found 15 pending item(s)
+2026-03-01 12:29:51,384 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:29:51,384 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:29:51,384 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:30:02,386 - Orchestrator - INFO - Found 15 pending item(s)
+2026-03-01 12:30:02,387 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:30:02,388 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:30:02,390 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:30:21,387 - Orchestrator - INFO - Found 15 pending item(s)
+2026-03-01 12:30:21,388 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:30:21,390 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:30:21,390 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:30:51,393 - Orchestrator - INFO - Found 15 pending item(s)
+2026-03-01 12:30:51,394 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:30:51,396 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:30:51,396 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:31:21,403 - Orchestrator - INFO - Found 16 pending item(s)
+2026-03-01 12:31:21,404 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:31:21,411 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:31:21,414 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:31:51,424 - Orchestrator - INFO - Found 16 pending item(s)
+2026-03-01 12:31:51,425 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:31:51,427 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:31:51,430 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:38:23,647 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 12:38:23,647 - Orchestrator - INFO - Vault: .
+2026-03-01 12:38:23,648 - Orchestrator - INFO - Dev mode: True
+2026-03-01 12:38:23,648 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 12:38:23,648 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 12:38:23,649 - Orchestrator - INFO - Found 9 pending item(s)
+2026-03-01 12:38:23,649 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:38:23,649 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:38:23,649 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:38:53,653 - Orchestrator - INFO - Found 9 pending item(s)
+2026-03-01 12:38:53,653 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:38:53,654 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:38:53,654 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:39:23,658 - Orchestrator - INFO - Found 9 pending item(s)
+2026-03-01 12:39:23,659 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:39:23,660 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:39:23,661 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:40:54,985 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 12:40:54,986 - Orchestrator - INFO - Vault: .
+2026-03-01 12:40:54,986 - Orchestrator - INFO - Dev mode: True
+2026-03-01 12:40:54,986 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 12:40:54,986 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 12:40:54,987 - Orchestrator - INFO - Found 9 pending item(s)
+2026-03-01 12:40:54,987 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:40:54,987 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:40:54,987 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:41:01,219 - Orchestrator - INFO - Orchestrator stopped by user
+2026-03-01 12:54:36,777 - Orchestrator - INFO - Orchestrator initialized
+2026-03-01 12:54:36,777 - Orchestrator - INFO - Vault: .
+2026-03-01 12:54:36,777 - Orchestrator - INFO - Dev mode: True
+2026-03-01 12:54:36,778 - Orchestrator - INFO - Starting Orchestrator
+2026-03-01 12:54:36,778 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-01 12:54:36,778 - Orchestrator - INFO - Found 10 pending item(s)
+2026-03-01 12:54:36,779 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:54:36,779 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:54:36,779 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:55:06,782 - Orchestrator - INFO - Found 10 pending item(s)
+2026-03-01 12:55:06,782 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:55:06,783 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:55:06,783 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:55:36,786 - Orchestrator - INFO - Found 10 pending item(s)
+2026-03-01 12:55:36,786 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:55:36,787 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:55:36,787 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:56:06,790 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 12:56:06,791 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:56:06,792 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:56:06,793 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:56:36,798 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 12:56:36,798 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:56:36,799 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:56:36,800 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:57:06,805 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 12:57:06,806 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:57:06,810 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:57:06,812 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:57:36,820 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 12:57:36,821 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:57:36,824 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:57:36,826 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:58:06,834 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 12:58:06,834 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:58:06,836 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:58:06,837 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:58:36,841 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 12:58:36,842 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:58:36,843 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:58:36,844 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:59:06,850 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 12:59:06,851 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:59:06,856 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:59:06,858 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 12:59:36,866 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 12:59:36,866 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 12:59:36,868 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 12:59:36,869 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 13:00:06,878 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 13:00:06,901 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 13:00:06,920 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 13:00:06,946 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 13:00:37,001 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 13:00:37,001 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 13:00:37,005 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 13:00:37,005 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 13:01:07,017 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 13:01:07,018 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 13:01:07,029 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 13:01:07,030 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 13:01:37,047 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 13:01:37,048 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 13:01:37,050 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 13:01:37,051 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-01 13:02:07,058 - Orchestrator - INFO - Found 11 pending item(s)
+2026-03-01 13:02:07,059 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-01 13:02:07,064 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-01 13:02:07,066 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
