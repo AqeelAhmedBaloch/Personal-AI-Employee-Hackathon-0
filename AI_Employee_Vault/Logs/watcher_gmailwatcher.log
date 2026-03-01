@@ -1,0 +1,25 @@
+2026-03-01 19:11:23,540 - GmailWatcher - INFO - GmailWatcher initialized
+2026-03-01 19:11:23,541 - GmailWatcher - INFO - Vault path: .
+2026-03-01 19:11:23,541 - GmailWatcher - INFO - Check interval: 120s
+2026-03-01 19:11:23,542 - GmailWatcher - INFO - Credentials path: D:\Q4-Hackathon\Personal-AI-Employee-Hackathon-0\AI_Employee_Vault\watchers\credentials.json
+2026-03-01 19:11:23,543 - GmailWatcher - INFO - Priority keywords: ['urgent', 'asap', 'invoice', 'payment', 'important']
+2026-03-01 19:11:23,545 - GmailWatcher - INFO - Starting continuous Gmail monitoring
+2026-03-01 19:11:23,546 - GmailWatcher - INFO - Checking every 120 seconds
+2026-03-01 19:11:23,546 - GmailWatcher - INFO - Press Ctrl+C to stop
+2026-03-01 19:11:24,722 - GmailWatcher - ERROR - Gmail libraries not installed. Run: pip install google-auth google-api-python-client
+2026-03-01 19:13:24,723 - GmailWatcher - ERROR - Gmail libraries not installed. Run: pip install google-auth google-api-python-client
+2026-03-01 19:13:45,987 - GmailWatcher - INFO - GmailWatcher initialized
+2026-03-01 19:13:45,988 - GmailWatcher - INFO - Vault path: .
+2026-03-01 19:13:45,988 - GmailWatcher - INFO - Check interval: 120s
+2026-03-01 19:13:45,989 - GmailWatcher - INFO - Credentials path: D:\Q4-Hackathon\Personal-AI-Employee-Hackathon-0\AI_Employee_Vault\watchers\credentials.json
+2026-03-01 19:13:45,989 - GmailWatcher - INFO - Priority keywords: ['urgent', 'asap', 'invoice', 'payment', 'important']
+2026-03-01 19:13:45,992 - GmailWatcher - INFO - Starting continuous Gmail monitoring
+2026-03-01 19:13:45,993 - GmailWatcher - INFO - Checking every 120 seconds
+2026-03-01 19:13:45,993 - GmailWatcher - INFO - Press Ctrl+C to stop
+2026-03-01 19:13:46,322 - GmailWatcher - ERROR - Gmail libraries not installed. Run: pip install google-auth google-api-python-client
+2026-03-01 19:15:24,724 - GmailWatcher - ERROR - Gmail libraries not installed. Run: pip install google-auth google-api-python-client
+2026-03-01 19:15:46,324 - GmailWatcher - ERROR - Gmail libraries not installed. Run: pip install google-auth google-api-python-client
+2026-03-01 19:17:24,726 - GmailWatcher - ERROR - Gmail libraries not installed. Run: pip install google-auth google-api-python-client
+2026-03-01 19:17:46,327 - GmailWatcher - ERROR - Gmail libraries not installed. Run: pip install google-auth google-api-python-client
+2026-03-01 19:19:24,728 - GmailWatcher - ERROR - Gmail libraries not installed. Run: pip install google-auth google-api-python-client
+2026-03-01 19:19:46,329 - GmailWatcher - ERROR - Gmail libraries not installed. Run: pip install google-auth google-api-python-client
