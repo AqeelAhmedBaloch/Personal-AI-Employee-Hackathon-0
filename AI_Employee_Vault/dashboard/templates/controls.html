@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controls - AI Employee Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .nav a {
+            background: #667eea;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .nav a:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        .button.success {
+            background: #10b981;
+        }
+        
+        .button.success:hover {
+            background: #059669;
+        }
+        
+        .button.danger {
+            background: #ef4444;
+        }
+        
+        .button.danger:hover {
+            background: #dc2626;
+        }
+        
+        .button.warning {
+            background: #f59e0b;
+        }
+        
+        .button.warning:hover {
+            background: #d97706;
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        
+        .alert-success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #10b981;
+            display: block;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎮 Manual Controls</h1>
+            <p>Start/Stop watchers and post to LinkedIn manually</p>
+            
+            <div class="nav">
+                <a href="/">📊 Dashboard</a>
+                <a href="/credentials">🔐 Credentials</a>
+                <a href="/controls">🎮 Controls</a>
+                <a href="/logs">📜 Logs</a>
+            </div>
+        </div>
+        
+        <!-- Watcher Controls -->
+        <div class="card">
+            <h2>▶️ Start Watchers</h2>
+            
+            <div id="alert" class="alert"></div>
+            
+            <button class="button" onclick="startWatcher('file')">
+                📁 Start File Watcher
+                <br><small style="font-weight: normal; opacity: 0.8;">Monitors Drop_Folder for new files</small>
+            </button>
+            
+            <button class="button" onclick="startWatcher('gmail')">
+                📧 Start Gmail Watcher
+                <br><small style="font-weight: normal; opacity: 0.8;">Monitors Gmail for new emails</small>
+            </button>
+            
+            <button class="button" onclick="startWatcher('orchestrator')">
+                🎯 Start Orchestrator
+                <br><small style="font-weight: normal; opacity: 0.8;">Coordinates all AI Employee activities</small>
+            </button>
+        </div>
+        
+        <!-- LinkedIn Controls -->
+        <div class="card">
+            <h2>💼 LinkedIn Posting</h2>
+            
+            <button class="button success" onclick="postLinkedIn('general')">
+                📝 Post General Update
+                <br><small style="font-weight: normal; opacity: 0.8;">Business update about AI Employee</small>
+            </button>
+            
+            <button class="button success" onclick="postLinkedIn('tip')">
+                💡 Post AI Tip
+                <br><small style="font-weight: normal; opacity: 0.8;">Share AI productivity tip</small>
+            </button>
+            
+            <button class="button success" onclick="postLinkedIn('milestone')">
+                🎉 Post Milestone
+                <br><small style="font-weight: normal; opacity: 0.8;">Share achievement/milestone</small>
+            </button>
+        </div>
+        
+        <!-- Emergency Controls -->
+        <div class="card">
+            <h2>🛑 Emergency Controls</h2>
+            
+            <button class="button danger" onclick="stopAll()">
+                🛑 Stop All Processes
+                <br><small style="font-weight: normal; opacity: 0.8;">Stops all Python processes immediately</small>
+            </button>
+        </div>
+        
+        <a href="/" class="back-link">← Back to Dashboard</a>
+    </div>
+    
+    <script>
+        function startWatcher(type) {
+            const formData = new FormData();
+            formData.append('type', type);
+            
+            fetch('/start_watcher', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const alert = document.getElementById('alert');
+                if (data.success) {
+                    alert.className = 'alert alert-success';
+                    alert.textContent = '✅ ' + data.message;
+                } else {
+                    alert.className = 'alert';
+                    alert.style.background = '#fee2e2';
+                    alert.style.color = '#991b1b';
+                    alert.style.border = '1px solid #ef4444';
+                    alert.textContent = '❌ ' + data.message;
+                }
+                alert.style.display = 'block';
+            });
+        }
+        
+        function postLinkedIn(postType) {
+            const formData = new FormData();
+            formData.append('post_type', postType);
+            
+            fetch('/post_linkedin', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const alert = document.getElementById('alert');
+                if (data.success) {
+                    alert.className = 'alert alert-success';
+                    alert.textContent = '✅ ' + data.message;
+                } else {
+                    alert.className = 'alert';
+                    alert.style.background = '#fee2e2';
+                    alert.style.color = '#991b1b';
+                    alert.style.border = '1px solid #ef4444';
+                    alert.textContent = '❌ ' + data.message;
+                }
+                alert.style.display = 'block';
+            });
+        }
+        
+        function stopAll() {
+            if (confirm('⚠️ Are you sure you want to stop all processes?')) {
+                fetch('/stop_all', {
+                    method: 'POST'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const alert = document.getElementById('alert');
+                    if (data.success) {
+                        alert.className = 'alert alert-success';
+                        alert.textContent = '✅ ' + data.message;
+                    } else {
+                        alert.className = 'alert';
+                        alert.style.background = '#fee2e2';
+                        alert.style.color = '#991b1b';
+                        alert.style.border = '1px solid #ef4444';
+                        alert.textContent = '❌ ' + data.message;
+                    }
+                    alert.style.display = 'block';
+                });
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs - AI Employee Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .nav a {
+            background: #667eea;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .nav a:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .log-list {
+            list-style: none;
+        }
+        
+        .log-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .log-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .log-list a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .log-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .log-viewer {
+            background: #1e293b;
+            color: #10b981;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .log-viewer pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1em;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .button:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📜 System Logs</h1>
+            <p>View logs from all AI Employee components</p>
+            
+            <div class="nav">
+                <a href="/">📊 Dashboard</a>
+                <a href="/credentials">🔐 Credentials</a>
+                <a href="/controls">🎮 Controls</a>
+                <a href="/logs">📜 Logs</a>
+            </div>
+        </div>
+        
+        <!-- Log Files List -->
+        <div class="card">
+            <h2>📁 Available Log Files</h2>
+            
+            <ul class="log-list">
+                {% for log_file in log_files %}
+                <li>
+                    <a href="#" onclick="viewLog('{{ log_file }}'); return false;">
+                        📄 {{ log_file.name }}
+                    </a>
+                    <small style="color: #666; margin-left: 10px;">
+                        ({{ log_file.stat().st_size }} bytes)
+                    </small>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <!-- Log Viewer -->
+        <div class="card">
+            <h2>📖 Log Viewer</h2>
+            
+            <div style="margin-bottom: 15px;">
+                <strong>Selected File:</strong> <span id="current-file">None</span>
+            </div>
+            
+            <div class="log-viewer">
+                <pre id="log-content">Select a log file to view contents...</pre>
+            </div>
+            
+            <button class="button" onclick="refreshLog()">🔄 Refresh Log</button>
+        </div>
+        
+        <a href="/" class="back-link">← Back to Dashboard</a>
+    </div>
+    
+    <script>
+        let currentLogFile = null;
+        
+        function viewLog(logFile) {
+            currentLogFile = logFile;
+            document.getElementById('current-file').textContent = logFile;
+            
+            fetch('/view_log/' + encodeURIComponent(logFile))
+                .then(response => response.json())
+                .then(data => {
+                    if (data.content) {
+                        document.getElementById('log-content').textContent = data.content;
+                    } else if (data.error) {
+                        document.getElementById('log-content').textContent = 'Error: ' + data.error;
+                    } else {
+                        document.getElementById('log-content').textContent = 'No content available';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('log-content').textContent = 'Error loading log: ' + error;
+                });
+        }
+        
+        function refreshLog() {
+            if (currentLogFile) {
+                viewLog(currentLogFile);
+            } else {
+                alert('Please select a log file first');
+            }
+        }
+    </script>
+</body>
+</html>

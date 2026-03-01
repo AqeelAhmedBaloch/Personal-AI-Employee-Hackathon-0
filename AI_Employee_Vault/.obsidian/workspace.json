@@ -178,17 +178,18 @@
   },
   "active": "e742e64848758ebe",
   "lastOpenFiles": [
-    "mcp_servers/linkedin_mcp/linkedin_daily_auto_post.py",
-    "mcp_servers/linkedin_mcp/linkedin_session/Safe Browsing",
-    "mcp_servers/linkedin_mcp/linkedin_api_poster.py",
-    "mcp_servers/linkedin_mcp/linkedin_session/Default/Network/ae91e04f-31ae-4126-882e-72f5b81f59b2.tmp",
-    "mcp_servers/linkedin_mcp/linkedin_session/BrowserMetrics-spare.pma",
-    "mcp_servers/linkedin_mcp/linkedin_session/Default/Network/1636d16d-d8e3-4a42-9844-21c048e8693e.tmp",
-    "mcp_servers/linkedin_mcp/linkedin_session/Default/Code Cache/js/index-dir/temp-index",
-    "mcp_servers/linkedin_mcp/linkedin_session/Default/07c91f40-d60e-4db0-9f5c-b423ada06648.tmp",
-    "mcp_servers/linkedin_mcp/linkedin_session/Default/Code Cache/js/8643893d92e7f68f_0",
-    "mcp_servers/linkedin_mcp/linkedin_session/Default/Cache/Cache_Data/f_000015",
-    "mcp_servers/linkedin_mcp/linkedin_session/Default/8d3ef9fa-137b-417d-91ff-a86ccb83ec32.tmp",
+    "dashboard/README.md",
+    "dashboard/start.bat",
+    "dashboard/requirements.txt",
+    "dashboard/templates/logs.html",
+    "dashboard/templates/controls.html",
+    "dashboard/templates/credentials.html",
+    "dashboard/templates/dashboard.html",
+    "dashboard/templates",
+    "dashboard/app.py",
+    "dashboard",
+    "mcp_servers/linkedin_mcp/SETUP_GUIDE.md",
+    "mcp_servers/linkedin_mcp/run_daily_post.bat",
     "LINKEDIN_IMPLEMENTATION.md",
     "Needs_Action/FILE_bronze_test_20260301_123801.md",
     "2026-03-01.md",
@@ -215,7 +216,6 @@
     "Plans/PLAN_FILE_perfect_test_20260301_131123.md",
     "Needs_Action/FILE_test_20260301_131123.md",
     "Needs_Action/FILE_perfect_test_20260301_131123.md",
-    "Plans/PLAN_FILE_test_document_20260301_123801.md",
-    "Plans/PLAN_FILE_test_20260301_125421.md"
+    "Plans/PLAN_FILE_test_document_20260301_123801.md"
   ]
 }
