@@ -84,3 +84,39 @@
 2026-03-01 12:55:49,111 - FileSystemWatcher - INFO - Processing file: perfect_test.txt
 2026-03-01 12:55:49,113 - FileSystemWatcher - INFO - Copied file to vault: Inbox\perfect_test.txt
 2026-03-01 12:55:49,114 - FileSystemWatcher - INFO - Action file created: FILE_perfect_test_20260301_125549.md
+2026-03-01 13:11:23,526 - FileSystemWatcher - INFO - FileSystemWatcher initialized
+2026-03-01 13:11:23,527 - FileSystemWatcher - INFO - Vault path: .
+2026-03-01 13:11:23,527 - FileSystemWatcher - INFO - Check interval: 5s
+2026-03-01 13:11:23,528 - FileSystemWatcher - INFO - Drop folder: Drop_Folder
+2026-03-01 13:11:23,528 - FileSystemWatcher - INFO - Starting FileSystemWatcher with real-time observer
+2026-03-01 13:11:23,530 - FileSystemWatcher - INFO - Watching folder: Drop_Folder
+2026-03-01 13:11:23,531 - FileSystemWatcher - INFO - Press Ctrl+C to stop
+2026-03-01 13:11:23,533 - FileSystemWatcher - INFO - Copied file to vault: Inbox\perfect_test.txt
+2026-03-01 13:11:23,557 - FileSystemWatcher - INFO - Action file created: FILE_perfect_test_20260301_131123.md
+2026-03-01 13:11:23,564 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test.txt
+2026-03-01 13:11:23,572 - FileSystemWatcher - INFO - Action file created: FILE_test_20260301_131123.md
+2026-03-01 13:13:26,779 - FileSystemWatcher - INFO - File created: Drop_Folder\silver_test.txt
+2026-03-01 13:13:26,781 - FileSystemWatcher - INFO - Processing file: silver_test.txt
+2026-03-01 13:13:26,783 - FileSystemWatcher - INFO - Copied file to vault: Inbox\silver_test.txt
+2026-03-01 13:13:26,785 - FileSystemWatcher - INFO - Action file created: FILE_silver_test_20260301_131326.md
+2026-03-01 13:55:42,877 - FileSystemWatcher - INFO - FileSystemWatcher initialized
+2026-03-01 13:55:42,877 - FileSystemWatcher - INFO - Vault path: .
+2026-03-01 13:55:42,878 - FileSystemWatcher - INFO - Check interval: 5s
+2026-03-01 13:55:42,878 - FileSystemWatcher - INFO - Drop folder: Drop_Folder
+2026-03-01 13:55:42,878 - FileSystemWatcher - INFO - Starting FileSystemWatcher with real-time observer
+2026-03-01 13:55:42,880 - FileSystemWatcher - INFO - Watching folder: Drop_Folder
+2026-03-01 13:55:42,881 - FileSystemWatcher - INFO - Press Ctrl+C to stop
+2026-03-01 13:55:42,883 - FileSystemWatcher - INFO - Copied file to vault: Inbox\perfect_test.txt
+2026-03-01 13:55:42,884 - FileSystemWatcher - INFO - Action file created: FILE_perfect_test_20260301_135542.md
+2026-03-01 13:55:42,886 - FileSystemWatcher - INFO - Copied file to vault: Inbox\silver_test.txt
+2026-03-01 13:55:42,887 - FileSystemWatcher - INFO - Action file created: FILE_silver_test_20260301_135542.md
+2026-03-01 13:55:42,888 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test.txt
+2026-03-01 13:55:42,889 - FileSystemWatcher - INFO - Action file created: FILE_test_20260301_135542.md
+2026-03-01 13:57:01,985 - FileSystemWatcher - INFO - File created: Drop_Folder\plan_test.txt
+2026-03-01 13:57:01,986 - FileSystemWatcher - INFO - Processing file: plan_test.txt
+2026-03-01 13:57:01,988 - FileSystemWatcher - INFO - Copied file to vault: Inbox\plan_test.txt
+2026-03-01 13:57:01,990 - FileSystemWatcher - INFO - Action file created: FILE_plan_test_20260301_135701.md
+2026-03-01 13:59:33,407 - FileSystemWatcher - INFO - File created: Drop_Folder\integration_test.txt
+2026-03-01 13:59:33,410 - FileSystemWatcher - INFO - Processing file: integration_test.txt
+2026-03-01 13:59:33,412 - FileSystemWatcher - INFO - Copied file to vault: Inbox\integration_test.txt
+2026-03-01 13:59:33,413 - FileSystemWatcher - INFO - Action file created: FILE_integration_test_20260301_135933.md

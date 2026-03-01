@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-03-01T13:02:07.072183
+last_updated: 2026-03-01T14:17:27.844485
 status: active
 ---
 
@@ -23,11 +23,11 @@ status: active
 
 ## 📥 Inbox Status
 
-| Folder | Count |
-|--------|-------|
-| /Inbox | 0 |
-| /Needs_Action | 11 |
-| /Pending_Approval | 0 |
+| Folder            | Count |
+| ----------------- | ----- |
+| /Inbox            | 0     |
+| /Needs_Action     | 14    |
+| /Pending_Approval | 1 |
 
 ---
 

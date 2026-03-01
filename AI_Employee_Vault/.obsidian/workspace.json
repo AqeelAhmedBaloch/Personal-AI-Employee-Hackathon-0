@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "9487ba90bf0b5538",
+        "id": "40402bf3f9506221",
         "type": "tabs",
         "children": [
           {
-            "id": "4024c11ebc6f9821",
+            "id": "56187dbbc0bb4754",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Dashboard.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Dashboard"
+              "title": "New tab"
             }
           }
         ]
@@ -182,9 +178,44 @@
   },
   "active": "e742e64848758ebe",
   "lastOpenFiles": [
-    "Needs_Action/FILE_perfect_test_20260301_125549.md",
-    "Inbox/perfect_test.txt",
-    "Drop_Folder/perfect_test.txt",
-    "Needs_Action/FILE_test_20260301_125421.md"
+    "mcp_servers/linkedin_mcp/linkedin_daily_auto_post.py",
+    "mcp_servers/linkedin_mcp/linkedin_session/Safe Browsing",
+    "mcp_servers/linkedin_mcp/linkedin_api_poster.py",
+    "mcp_servers/linkedin_mcp/linkedin_session/Default/Network/ae91e04f-31ae-4126-882e-72f5b81f59b2.tmp",
+    "mcp_servers/linkedin_mcp/linkedin_session/BrowserMetrics-spare.pma",
+    "mcp_servers/linkedin_mcp/linkedin_session/Default/Network/1636d16d-d8e3-4a42-9844-21c048e8693e.tmp",
+    "mcp_servers/linkedin_mcp/linkedin_session/Default/Code Cache/js/index-dir/temp-index",
+    "mcp_servers/linkedin_mcp/linkedin_session/Default/07c91f40-d60e-4db0-9f5c-b423ada06648.tmp",
+    "mcp_servers/linkedin_mcp/linkedin_session/Default/Code Cache/js/8643893d92e7f68f_0",
+    "mcp_servers/linkedin_mcp/linkedin_session/Default/Cache/Cache_Data/f_000015",
+    "mcp_servers/linkedin_mcp/linkedin_session/Default/8d3ef9fa-137b-417d-91ff-a86ccb83ec32.tmp",
+    "LINKEDIN_IMPLEMENTATION.md",
+    "Needs_Action/FILE_bronze_test_20260301_123801.md",
+    "2026-03-01.md",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "Untitled.canvas",
+    "Needs_Action/FILE_debug_test_20260301_123801.md",
+    "Pending_Approval/APPROVAL_Test_Payment_20260301_135843.md",
+    "Dashboard.md",
+    "Plans/PLAN_FILE_integration_test_20260301_135933.md",
+    "Needs_Action/FILE_integration_test_20260301_135933.md",
+    "Plans/PLAN_FILE_plan_test_20260301_135701.md",
+    "Needs_Action/FILE_plan_test_20260301_135701.md",
+    "Plans/PLAN_FILE_test_20260301_135542.md",
+    "Plans/PLAN_FILE_silver_test_20260301_135542.md",
+    "Plans/PLAN_FILE_perfect_test_20260301_135542.md",
+    "Needs_Action/FILE_test_20260301_135542.md",
+    "Needs_Action/FILE_silver_test_20260301_135542.md",
+    "Needs_Action/FILE_perfect_test_20260301_135542.md",
+    "Briefings/2026-03-01_Sunday_Briefing.md",
+    "Plans/PLAN_FILE_silver_test_20260301_131326.md",
+    "Needs_Action/FILE_silver_test_20260301_131326.md",
+    "Plans/PLAN_FILE_test_20260301_131123.md",
+    "Plans/PLAN_FILE_perfect_test_20260301_131123.md",
+    "Needs_Action/FILE_test_20260301_131123.md",
+    "Needs_Action/FILE_perfect_test_20260301_131123.md",
+    "Plans/PLAN_FILE_test_document_20260301_123801.md",
+    "Plans/PLAN_FILE_test_20260301_125421.md"
   ]
 }

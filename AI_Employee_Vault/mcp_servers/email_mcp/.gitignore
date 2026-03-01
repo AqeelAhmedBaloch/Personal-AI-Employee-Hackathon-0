@@ -1,0 +1,11 @@
+# Email MCP Server - Environment Variables
+# NEVER commit this file!
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Logs
+*.log

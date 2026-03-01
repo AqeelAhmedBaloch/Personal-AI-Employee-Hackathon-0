@@ -8,9 +8,10 @@ triggers Qwen Code to process pending actions.
 The orchestrator:
 1. Watches /Needs_Action for new action files
 2. Triggers Qwen Code to process pending items
-3. Monitors /Approved for approved actions to execute
-4. Updates Dashboard.md with current status
-5. Manages logging and audit trails
+3. Generates Plan.md files for action items
+4. Monitors /Approved for approved actions to execute
+5. Updates Dashboard.md with current status
+6. Manages logging and audit trails
 
 Usage:
     python orchestrator.py /path/to/vault [--dev-mode]
@@ -26,6 +27,9 @@ from datetime import datetime
 from typing import List, Dict, Any, Optional
 import logging
 import time
+
+# Import Plan Generator
+from plan_generator import PlanGenerator
 
 
 class Orchestrator:
@@ -65,6 +69,9 @@ class Orchestrator:
         
         # Set up logging
         self._setup_logging()
+        
+        # Initialize Plan Generator
+        self.plan_generator = PlanGenerator(str(vault_path))
         
         self.logger.info(f'Orchestrator initialized')
         self.logger.info(f'Vault: {self.vault_path}')
@@ -127,10 +134,15 @@ class Orchestrator:
         try:
             # Check for pending actions
             pending_count = self._count_pending()
-            
+
             if pending_count > 0:
                 self.logger.info(f'Found {pending_count} pending item(s)')
                 
+                # Generate plans for new action files
+                plans_created = self._generate_plans()
+                if plans_created > 0:
+                    self.logger.info(f'Generated {plans_created} new plan(s)')
+
                 # Trigger Qwen Code to process
                 self._trigger_qwen()
             
@@ -155,7 +167,35 @@ class Orchestrator:
     def _count_pending(self) -> int:
         """Count pending items in Needs_Action."""
         return len(list(self.needs_action.glob('*.md')))
-    
+
+    def _generate_plans(self) -> int:
+        """
+        Generate Plan.md files for action files without plans.
+        
+        Returns:
+            Number of plans created
+        """
+        try:
+            plans_created = 0
+            
+            for action_file in self.needs_action.glob('*.md'):
+                # Skip if already has a plan
+                plan_filename = f'PLAN_{action_file.stem}.md'
+                plan_path = self.plans / plan_filename
+                
+                if plan_path.exists():
+                    continue
+                
+                # Generate plan
+                if self.plan_generator.generate_plan(action_file):
+                    plans_created += 1
+            
+            return plans_created
+            
+        except Exception as e:
+            self.logger.error(f'Error generating plans: {e}')
+            return 0
+
     def _trigger_qwen(self) -> None:
         """
         Trigger Qwen Code to process pending items.

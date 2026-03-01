@@ -1,0 +1,10 @@
+# Email MCP Server Requirements
+
+# Google Gmail API
+google-auth>=2.27.0
+google-auth-oauthlib>=1.2.0
+google-auth-httplib2>=0.2.0
+google-api-python-client>=2.118.0
+
+# Environment variables
+python-dotenv>=1.0.0
