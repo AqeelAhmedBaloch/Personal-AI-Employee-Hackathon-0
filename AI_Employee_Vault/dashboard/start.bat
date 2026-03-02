@@ -2,7 +2,7 @@
 REM AI Employee Dashboard - Quick Start
 
 echo ============================================
-echo    AI Employee Dashboard - Quick Start
+echo    Personal AI Employee Hackathon-0 Dashboard - Quick Start
 echo ============================================
 echo.
 

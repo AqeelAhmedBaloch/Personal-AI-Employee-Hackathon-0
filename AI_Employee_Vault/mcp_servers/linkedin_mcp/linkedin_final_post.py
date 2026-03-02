@@ -48,7 +48,7 @@ class LinkedInFinalPoster:
 
 AI can process emails 10x faster than humans!
 
-Our AI Employee:
+Our Personal AI Employee Hackathon-0:
 ✅ Auto-replies to emails
 ✅ Categorizes by priority
 ✅ Drafts appropriate replies

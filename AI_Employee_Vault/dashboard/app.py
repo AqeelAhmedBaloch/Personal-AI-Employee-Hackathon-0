@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AI Employee Dashboard - Web Interface
+Personal AI Employee Hackathon-0 Dashboard - Web Interface
 
 Simple web dashboard to:
 - View system status
@@ -302,7 +302,7 @@ if __name__ == '__main__':
     templates_dir.mkdir(exist_ok=True)
     
     print('=' * 60)
-    print('AI Employee Dashboard')
+    print('Personal AI Employee Hackathon-0 Dashboard')
     print('=' * 60)
     print('')
     print('Open in browser:')

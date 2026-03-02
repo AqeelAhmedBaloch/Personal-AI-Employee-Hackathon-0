@@ -3,12 +3,12 @@ REM AI Employee - Stop All Script
 REM Yeh script sab processes ko stop karegi
 
 echo ============================================
-echo    AI EMPLOYEE - STOPPING ALL PROCESSES
+echo    PERSONAL AI EMPLOYEE HACKATHON-0 - STOPPING ALL PROCESSES
 echo ============================================
 echo.
 
 echo Stopping Python processes...
-taskkill /F /FI "WINDOWTITLE eq AI Employee*" 2>nul
+taskkill /F /FI "WINDOWTITLE eq Personal AI Employee*" 2>nul
 echo.
 
 echo Stopping all Python processes (careful)...

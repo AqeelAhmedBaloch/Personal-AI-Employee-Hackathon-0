@@ -1,4 +1,4 @@
-# AI Employee - Quick Start Guide 🚀
+# Personal AI Employee Hackathon-0 - Quick Start Guide 🚀
 
 ## Step-by-Step Instructions (Roman Urdu Mein)
 
@@ -26,14 +26,14 @@ Jab `run.bat` run hoga, to **do alag terminal windows** khulengi:
 
 ### Window 1: File Watcher 📁
 ```
-AI Employee - File Watcher
+Personal AI Employee Hackathon-0 - File Watcher
 ```
 - Yeh `Drop_Folder` ko monitor karti hai
 - Jab bhi koi nayi file ayegi, detect karegi
 
 ### Window 2: Orchestrator 🎯
 ```
-AI Employee - Orchestrator
+Personal AI Employee Hackathon-0 - Orchestrator
 ```
 - Yeh check karta hai ke kaunse actions pending hain
 - Har 30 seconds mein check karta hai
@@ -50,7 +50,7 @@ Ab aap test kar sakte hain:
 
 **Option B:** Command prompt mein likhein:
 ```bash
-echo "Mera pehla AI Employee test" > Drop_Folder\test.txt
+echo "Mera pehla Personal AI Employee Hackathon-0 test" > Drop_Folder\test.txt
 ```
 
 ---

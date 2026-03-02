@@ -1,4 +1,4 @@
-# AI Employee - Python Dependencies
+# Personal AI Employee Hackathon-0 - Python Dependencies
 # Bronze Tier Requirements
 
 # File system watching (real-time file monitoring)

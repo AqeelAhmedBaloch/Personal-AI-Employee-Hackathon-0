@@ -90,7 +90,7 @@ We have received your message and our team is reviewing it. We will get back to 
 If this is urgent, please call us at [Your Phone Number].
 
 Best regards,
-AI Employee System
+Personal AI Employee Hackathon-0 System
 [Your Company Name]''',
             
             'general_inquiry': '''Thank you for contacting us!
@@ -102,7 +102,7 @@ Our team will review your message and respond within 24-48 hours.
 In the meantime, feel free to visit our website: [Your Website]
 
 Best regards,
-AI Employee System''',
+Personal AI Employee Hackathon-0 System''',
             
             'meeting_request': '''Thank you for your meeting request.
 
@@ -113,7 +113,7 @@ Our team will respond with available time slots within 24 hours.
 Looking forward to connecting with you!
 
 Best regards,
-AI Employee System''',
+Personal AI Employee Hackathon-0 System''',
             
             'payment_received': '''Dear Valued Client,
 
@@ -129,7 +129,7 @@ Your account has been updated accordingly.
 If you have any questions, please don't hesitate to contact us.
 
 Best regards,
-AI Employee System''',
+Personal AI Employee Hackathon-0 System''',
             
             'support_ticket': '''Dear Customer,
 
@@ -150,7 +150,7 @@ Support Team''',
 We have received your message and will respond as soon as possible.
 
 Best regards,
-AI Employee System'''
+Personal AI Employee Hackathon-0 System'''
         }
     
     def check_for_new_emails(self) -> List[Dict[str, Any]]:

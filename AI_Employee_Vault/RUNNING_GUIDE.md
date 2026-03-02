@@ -1,4 +1,4 @@
-# 🚀 AI Employee - Complete Running Guide
+# 🚀 Personal AI Employee Hackathon-0 - Complete Running Guide
 
 **Date:** March 2, 2026  
 **Version:** 1.0

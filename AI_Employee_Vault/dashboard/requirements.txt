@@ -1,4 +1,4 @@
-# AI Employee Dashboard Requirements
+# Personal AI Employee Hackathon-0 Dashboard Requirements
 
 # Web Framework
 Flask>=3.0.0

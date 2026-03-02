@@ -1,6 +1,6 @@
-# 🤖 AI Employee Dashboard
+# 🤖 Personal AI Employee Hackathon-0 Dashboard
 
-Web-based control center for your AI Employee system.
+Web-based control center for your Personal AI Employee Hackathon-0 system.
 
 ---
 
@@ -233,4 +233,4 @@ For issues or questions:
 
 ---
 
-**Enjoy your AI Employee Dashboard!** 🎉
+**Enjoy your Personal AI Employee Hackathon-0 Dashboard!** 🎉

@@ -3,7 +3,7 @@ REM AI Employee - Complete Startup Script
 REM Yeh script sab kuch automatically start karegi
 
 echo ============================================
-echo    AI EMPLOYEE - COMPLETE STARTUP
+echo    PERSONAL AI EMPLOYEE HACKATHON-0 - COMPLETE STARTUP
 echo ============================================
 echo.
 

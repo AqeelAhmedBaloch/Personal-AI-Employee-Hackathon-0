@@ -5,7 +5,7 @@ REM This runs every day at 8:00 AM
 cd /d "%~dp0"
 
 echo ============================================
-echo    AI Employee - Daily Briefing
+echo    Personal AI Employee Hackathon-0 - Daily Briefing
 echo ============================================
 echo.
 

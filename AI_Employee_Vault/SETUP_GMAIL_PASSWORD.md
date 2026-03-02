@@ -27,7 +27,7 @@ Ya phir:
 
 1. **App select karein:** `Mail`
 2. **Device select karein:** `Other (Custom name)`
-3. **Name enter karein:** `AI Employee`
+3. **Name enter karein:** `Personal AI Employee Hackathon-0`
 4. **Generate button** par click karein
 
 ---

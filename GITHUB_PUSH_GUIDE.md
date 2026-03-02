@@ -1,4 +1,4 @@
-# AI Employee - GitHub Push Guide
+# Personal AI Employee Hackathon-0 - GitHub Push Guide
 
 **Date:** March 2, 2026
 
@@ -487,7 +487,7 @@ git add .
 git status
 
 # Commit
-git commit -m "Initial commit: AI Employee Hackathon Project"
+git commit -m "Initial commit: Personal AI Employee Hackathon-0 Project"
 
 # Add remote (replace with your repo URL)
 git remote add origin https://github.com/YOUR_USERNAME/Personal-AI-Employee-Hackathon-0.git

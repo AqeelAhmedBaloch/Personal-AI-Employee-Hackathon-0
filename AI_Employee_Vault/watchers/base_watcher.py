@@ -1,7 +1,7 @@
 """
 Base Watcher Module
 
-Abstract base class for all watcher scripts in the AI Employee system.
+Abstract base class for all watcher scripts in the Personal AI Employee Hackathon-0 system.
 All watchers follow the same pattern: monitor inputs and create actionable
 files in the Needs_Action folder.
 """
@@ -16,7 +16,7 @@ from typing import List, Any, Optional
 
 class BaseWatcher(ABC):
     """
-    Abstract base class for all AI Employee watchers.
+    Abstract base class for all Personal AI Employee Hackathon-0 watchers.
     
     Watchers are long-running processes that monitor external inputs
     (email, WhatsApp, files, etc.) and create action files when new

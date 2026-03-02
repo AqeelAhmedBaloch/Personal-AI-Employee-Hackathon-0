@@ -1,5 +1,5 @@
 ===============================================
-Test Email for AI Employee Auto-Reply System
+Test Email for Personal AI Employee Hackathon-0 Auto-Reply System
 ===============================================
 
 From: aqeelwork2025@gmail.com
@@ -10,11 +10,11 @@ Subject: Meeting Request - Business Discussion
 Email Body:
 -----------------------------------------------
 
-Dear AI Employee Team,
+Dear Personal AI Employee Hackathon-0 Team,
 
 I hope this email finds you well.
 
-I am writing to request a meeting with your team to discuss potential business collaboration opportunities. We are interested in learning more about your AI Employee system and how it can benefit our organization.
+I am writing to request a meeting with your team to discuss potential business collaboration opportunities. We are interested in learning more about your Personal AI Employee Hackathon-0 system and how it can benefit our organization.
 
 Preferred Meeting Times:
 - Monday to Friday: 10:00 AM - 4:00 PM
@@ -57,7 +57,7 @@ Subject: Technical Support Needed
 
 Hi Support Team,
 
-I am facing an issue with the AI Employee system. The file watcher is not detecting new files in the drop folder.
+I am facing an issue with the Personal AI Employee Hackathon-0 system. The file watcher is not detecting new files in the drop folder.
 
 Error Details:
 - Issue: File not being processed
@@ -76,7 +76,7 @@ Subject: Question About Your Services
 
 Hello,
 
-I came across your AI Employee system and I'm interested in learning more about it.
+I came across your Personal AI Employee Hackathon-0 system and I'm interested in learning more about it.
 
 Could you please provide:
 1. Features overview

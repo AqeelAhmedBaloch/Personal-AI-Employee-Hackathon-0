@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "40402bf3f9506221",
+        "id": "0d6687d518cf0831",
         "type": "tabs",
         "children": [
           {
-            "id": "56187dbbc0bb4754",
+            "id": "ba3bbce4e03a0a8c",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -176,8 +176,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "56187dbbc0bb4754",
+  "active": "ba3bbce4e03a0a8c",
   "lastOpenFiles": [
+    "Logs/2026-03-01.md",
     "dashboard/professional-dashboard.html",
     "_RecycleBin/README.md",
     "_RecycleBin/linkedin_session/Default/Shared Dictionary/cache/index-dir/the-real-index",
@@ -189,7 +190,6 @@
     "_RecycleBin/linkedin_session/Default/Sync Data/LevelDB/LOG",
     "_RecycleBin/linkedin_session/Default/Sync Data/LevelDB/LOCK",
     "_RecycleBin/linkedin_session/Default/Sync Data/LevelDB/CURRENT",
-    "_RecycleBin/linkedin_session/Default/Sync Data/LevelDB/000003.log",
     "_RecycleBin/2026-03-01.md",
     "_RecycleBin/Untitled.canvas",
     "_RecycleBin/Untitled 2.canvas",

@@ -2,7 +2,7 @@
 """
 Orchestrator
 
-Master process that monitors the AI Employee vault folders and
+Master process that monitors the Personal AI Employee Hackathon-0 vault folders and
 triggers Qwen Code to process pending actions.
 
 The orchestrator:
@@ -34,7 +34,7 @@ from plan_generator import PlanGenerator
 
 class Orchestrator:
     """
-    Main orchestrator for the AI Employee system.
+    Main orchestrator for the Personal AI Employee Hackathon-0 system.
 
     Coordinates between watchers, Qwen Code, and action execution.
     """
@@ -520,7 +520,7 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(
-        description='AI Employee Orchestrator'
+        description='Personal AI Employee Hackathon-0 Orchestrator'
     )
     parser.add_argument(
         'vault_path',

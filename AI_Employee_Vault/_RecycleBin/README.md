@@ -176,7 +176,7 @@ git status
 git add .
 
 # Commit
-git commit -m "Initial commit: AI Employee - Silver Tier Complete"
+git commit -m "Initial commit: Personal AI Employee Hackathon-0 - Silver Tier Complete"
 
 # Push to GitHub
 git push -u origin main

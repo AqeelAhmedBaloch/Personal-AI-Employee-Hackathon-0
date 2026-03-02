@@ -1,8 +1,8 @@
-# AI Employee - Bronze Tier
+# Personal AI Employee Hackathon-0 - Bronze Tier
 
 > **Personal AI Employee Hackathon 0: Building Autonomous FTEs in 2026**
 
-A local-first, agent-driven AI employee system built with Qwen Code and Obsidian.
+A local-first, agent-driven Personal AI Employee Hackathon-0 system built with Qwen Code and Obsidian.
 
 ---
 
@@ -23,7 +23,7 @@ A local-first, agent-driven AI employee system built with Qwen Code and Obsidian
 
 ## Overview
 
-This Bronze Tier implementation provides the foundation for your Personal AI Employee:
+This Bronze Tier implementation provides the foundation for your Personal AI Employee Hackathon-0:
 
 - ✅ Obsidian vault with Dashboard.md and Company_Handbook.md
 - ✅ File System Watcher (monitors drop folder for new files)
@@ -278,4 +278,4 @@ This project is part of the Personal AI Employee Hackathon 0.
 
 ---
 
-*Built with ❤️ for the AI Employee Hackathon 0*
+*Built with ❤️ for the Personal AI Employee Hackathon 0*

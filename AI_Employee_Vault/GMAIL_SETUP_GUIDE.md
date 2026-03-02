@@ -21,7 +21,7 @@ Agar already enabled hai to skip karein:
 2. Neeche scroll karein → **App passwords** par click karein
 3. **App** select karein: **Mail**
 4. **Device** select karein: **Other (Custom name)**
-5. Custom name enter karein: `AI Employee System`
+5. Custom name enter karein: `Personal AI Employee Hackathon-0 System`
 6. **Generate** par click karein
 
 ## Step 4: Password Copy Karein

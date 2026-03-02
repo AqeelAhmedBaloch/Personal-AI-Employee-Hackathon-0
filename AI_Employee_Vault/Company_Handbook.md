@@ -5,7 +5,7 @@ last_updated: 2026-03-01
 
 # Company Handbook
 
-> This document contains the "Rules of Engagement" for the AI Employee. All actions should align with these principles.
+> This document contains the "Rules of Engagement" for the Personal AI Employee Hackathon-0. All actions should align with these principles.
 
 ---
 
@@ -77,7 +77,7 @@ Flag for immediate human review:
 ## 📋 Task Processing Workflow
 
 1. **Detect:** Watcher creates file in `/Needs_Action`
-2. **Read:** AI Employee reads the file and understands the task
+2. **Read:** Personal AI Employee Hackathon-0 reads the file and understands the task
 3. **Plan:** Create a `Plan.md` with step-by-step actions
 4. **Execute:** Perform non-sensitive actions, request approval for sensitive ones
 5. **Log:** Record action in `/Logs/YYYY-MM-DD.md`
