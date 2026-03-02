@@ -206,19 +206,63 @@ def stop_all():
 def post_linkedin():
     """Post to LinkedIn now."""
     post_type = request.form.get('post_type', 'general')
-    
+
+    try:
+        # Use the new simple daily post script
+        result = subprocess.run(
+            ['python', 'mcp_servers/linkedin_mcp/linkedin_simple_daily_post.py'],
+            cwd=str(VAULT_PATH),
+            capture_output=True,
+            text=True,
+            timeout=120
+        )
+
+        if result.returncode == 0:
+            return jsonify({'success': True, 'message': 'Post published to LinkedIn!'})
+        else:
+            return jsonify({'success': False, 'message': result.stderr})
+    except subprocess.TimeoutExpired:
+        return jsonify({'success': False, 'message': 'Posting timed out'})
+    except Exception as e:
+        return jsonify({'success': False, 'message': str(e)})
+
+
+@app.route('/linkedin_task_status')
+def linkedin_task_status():
+    """Get LinkedIn Task Scheduler status."""
     try:
         result = subprocess.run(
-            ['python', 'mcp_servers/linkedin_mcp/linkedin_daily_auto_post.py'],
-            cwd=str(VAULT_PATH),
+            ['schtasks', '/Query', '/TN', 'LinkedIn Daily Post 12PM', '/FO', 'LIST'],
             capture_output=True,
             text=True
         )
         
         if result.returncode == 0:
-            return jsonify({'success': True, 'message': 'Post published to LinkedIn!'})
+            # Parse the output
+            lines = result.stdout.strip().split('\n')
+            status = {}
+            for line in lines:
+                if ':' in line:
+                    key, value = line.split(':', 1)
+                    status[key.strip()] = value.strip()
+            
+            return jsonify({'success': True, 'task': status})
         else:
-            return jsonify({'success': False, 'message': result.stderr})
+            return jsonify({'success': False, 'message': 'Task not found'})
+    except Exception as e:
+        return jsonify({'success': False, 'message': str(e)})
+
+
+@app.route('/run_linkedin_task_now', methods=['POST'])
+def run_linkedin_task_now():
+    """Run LinkedIn task immediately."""
+    try:
+        subprocess.run(
+            ['schtasks', '/Run', '/TN', 'LinkedIn Daily Post 12PM'],
+            capture_output=True,
+            text=True
+        )
+        return jsonify({'success': True, 'message': 'LinkedIn task started!'})
     except Exception as e:
         return jsonify({'success': False, 'message': str(e)})
 

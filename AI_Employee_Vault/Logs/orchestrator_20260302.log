@@ -1,0 +1,42 @@
+2026-03-02 10:13:26,136 - Orchestrator - INFO - Orchestrator initialized
+2026-03-02 10:13:26,137 - Orchestrator - INFO - Vault: .
+2026-03-02 10:13:26,137 - Orchestrator - INFO - Dev mode: True
+2026-03-02 10:13:26,137 - Orchestrator - INFO - Starting Orchestrator
+2026-03-02 10:13:26,137 - Orchestrator - INFO - Press Ctrl+C to stop
+2026-03-02 10:13:26,138 - Orchestrator - INFO - Found 41 pending item(s)
+2026-03-02 10:13:26,149 - Orchestrator - INFO - Generated 6 new plan(s)
+2026-03-02 10:13:26,150 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-02 10:13:26,150 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-02 10:13:26,150 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-02 10:13:26,165 - Orchestrator - INFO - Dashboard updated: NA=41, PA=0, Done=2
+2026-03-02 10:13:36,167 - Orchestrator - INFO - Found 41 pending item(s)
+2026-03-02 10:13:36,179 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-02 10:13:36,179 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-02 10:13:36,180 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-02 10:13:36,192 - Orchestrator - INFO - Dashboard updated: NA=41, PA=0, Done=2
+2026-03-02 10:13:46,194 - Orchestrator - INFO - Found 42 pending item(s)
+2026-03-02 10:13:46,197 - Orchestrator - INFO - Generated 1 new plan(s)
+2026-03-02 10:13:46,198 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-02 10:13:46,198 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-02 10:13:46,198 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-02 10:13:46,201 - Orchestrator - INFO - Dashboard updated: NA=42, PA=0, Done=2
+2026-03-02 10:13:56,204 - Orchestrator - INFO - Found 42 pending item(s)
+2026-03-02 10:13:56,219 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-02 10:13:56,220 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-02 10:13:56,221 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-02 10:13:56,233 - Orchestrator - INFO - Dashboard updated: NA=42, PA=0, Done=2
+2026-03-02 10:14:06,234 - Orchestrator - INFO - Found 42 pending item(s)
+2026-03-02 10:14:06,236 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-02 10:14:06,236 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-02 10:14:06,237 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-02 10:14:06,239 - Orchestrator - INFO - Dashboard updated: NA=42, PA=0, Done=2
+2026-03-02 10:14:16,241 - Orchestrator - INFO - Found 42 pending item(s)
+2026-03-02 10:14:16,252 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-02 10:14:16,252 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-02 10:14:16,252 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-02 10:14:16,259 - Orchestrator - INFO - Dashboard updated: NA=42, PA=0, Done=2
+2026-03-02 10:14:26,261 - Orchestrator - INFO - Found 42 pending item(s)
+2026-03-02 10:14:26,265 - Orchestrator - INFO - Triggering Qwen Code processing...
+2026-03-02 10:14:26,265 - Orchestrator - INFO - [DEV MODE] Would trigger Qwen Code
+2026-03-02 10:14:26,265 - Orchestrator - INFO - [DEV MODE] Run manually: qwen -c "Process /Needs_Action folder"
+2026-03-02 10:14:26,273 - Orchestrator - INFO - Dashboard updated: NA=42, PA=0, Done=2

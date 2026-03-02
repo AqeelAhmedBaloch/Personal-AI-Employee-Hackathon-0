@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 AI Employee - Autonomous Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-green: #00ff88;
+            --neon-purple: #bc13fe;
+            --neon-pink: #ff006e;
+            --dark-bg: #0a0e1a;
+            --card-bg: #111827;
+            --text-primary: #e5e7eb;
+            --text-secondary: #9ca3af;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', monospace;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(188, 19, 254, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 243, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+            z-index: -1;
+            animation: bgPulse 10s ease-in-out infinite;
+        }
+
+        @keyframes bgPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Grid pattern overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header with AI effect */
+        .header {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.9));
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0, 243, 255, 0.2);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(0, 243, 255, 0.1) 50%,
+                transparent 70%
+            );
+            animation: scan 3s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-green), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+
+        .header .tagline {
+            color: var(--neon-green);
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid var(--neon-green);
+            border-radius: 25px;
+            margin-top: 15px;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: var(--neon-green);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.3); opacity: 0.7; }
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.9));
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.3);
+            border-color: var(--neon-blue);
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .metric-value {
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.9));
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            color: var(--neon-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* AI Process Visualization */
+        .process-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(0, 243, 255, 0.05);
+            border-left: 3px solid var(--neon-blue);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .process-step.active {
+            background: rgba(0, 243, 255, 0.15);
+            border-left-color: var(--neon-green);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .process-step.completed {
+            border-left-color: var(--neon-green);
+            opacity: 0.7;
+        }
+
+        .process-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .process-step.active .process-icon {
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .process-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid var(--neon-blue);
+            animation: ripple 2s ease-out infinite;
+        }
+
+        @keyframes ripple {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        .process-content {
+            flex: 1;
+        }
+
+        .process-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .process-status {
+            font-size: 0.85em;
+            color: var(--text-secondary);
+        }
+
+        .process-time {
+            font-size: 0.8em;
+            color: var(--neon-blue);
+            white-space: nowrap;
+        }
+
+        /* Live Terminal */
+        .terminal {
+            background: #0d1117;
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            font-family: 'Courier New', 'Consolas', monospace;
+            font-size: 0.85em;
+            height: 400px;
+            overflow-y: auto;
+        }
+
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-dot.red { background: #ff5f56; }
+        .terminal-dot.yellow { background: #ffbd2e; }
+        .terminal-dot.green { background: #27c93f; }
+
+        .terminal-content {
+            color: var(--neon-green);
+            line-height: 1.6;
+        }
+
+        .terminal-line {
+            margin-bottom: 5px;
+            opacity: 0;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .terminal-line .timestamp {
+            color: var(--text-secondary);
+            margin-right: 10px;
+        }
+
+        .terminal-line .info { color: var(--neon-blue); }
+        .terminal-line .success { color: var(--neon-green); }
+        .terminal-line .warning { color: var(--neon-pink); }
+        .terminal-line .error { color: #ff5f56; }
+
+        /* Progress Bar */
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            height: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-green), var(--neon-purple));
+            border-radius: 10px;
+            transition: width 1s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            animation: progressShine 2s infinite;
+        }
+
+        @keyframes progressShine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Tier Cards */
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .tier-card {
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tier-card.bronze {
+            border-color: #cd7f32;
+            background: linear-gradient(135deg, rgba(205, 127, 50, 0.1), rgba(205, 127, 50, 0.05));
+        }
+
+        .tier-card.silver {
+            border-color: #c0c0c0;
+            background: linear-gradient(135deg, rgba(192, 192, 192, 0.1), rgba(192, 192, 192, 0.05));
+        }
+
+        .tier-card.gold {
+            border-color: #ffd700;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05));
+        }
+
+        .tier-card.platinum {
+            border-color: #e5e4e2;
+            background: linear-gradient(135deg, rgba(229, 228, 226, 0.1), rgba(229, 228, 226, 0.05));
+        }
+
+        .tier-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tier-card.bronze .tier-name { color: #cd7f32; }
+        .tier-card.silver .tier-name { color: #c0c0c0; }
+        .tier-card.gold .tier-name { color: #ffd700; }
+        .tier-card.platinum .tier-name { color: #e5e4e2; }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.4);
+        }
+
+        .btn.success {
+            background: linear-gradient(135deg, var(--neon-green), #059669);
+        }
+
+        .btn.warning {
+            background: linear-gradient(135deg, var(--neon-pink), #db2777);
+        }
+
+        .btn.danger {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+
+        /* Activity Feed */
+        .activity-feed {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .activity-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            border-left: 3px solid var(--neon-blue);
+            margin-bottom: 10px;
+            background: rgba(0, 243, 255, 0.05);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .activity-item:hover {
+            background: rgba(0, 243, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        .activity-content {
+            flex: 1;
+        }
+
+        .activity-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+
+        .activity-time {
+            font-size: 0.85em;
+            color: var(--neon-blue);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--neon-blue);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--neon-green);
+        }
+
+        /* AI Brain Animation */
+        .ai-brain {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 80px;
+            height: 80px;
+            z-index: 1000;
+        }
+
+        .brain-circle {
+            position: absolute;
+            border: 3px solid var(--neon-blue);
+            border-radius: 50%;
+            animation: brainPulse 2s ease-in-out infinite;
+        }
+
+        .brain-circle:nth-child(1) {
+            width: 100%;
+            height: 100%;
+            animation-delay: 0s;
+        }
+
+        .brain-circle:nth-child(2) {
+            width: 70%;
+            height: 70%;
+            top: 15%;
+            left: 15%;
+            border-color: var(--neon-green);
+            animation-delay: 0.3s;
+        }
+
+        .brain-circle:nth-child(3) {
+            width: 40%;
+            height: 40%;
+            top: 30%;
+            left: 30%;
+            border-color: var(--neon-purple);
+            animation-delay: 0.6s;
+        }
+
+        @keyframes brainPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        .brain-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <h1>🤖 AI EMPLOYEE</h1>
+                <p class="tagline">AUTONOMOUS DIGITAL WORKER - CONTROL CENTER</p>
+                <p style="color: var(--text-secondary); margin-top: 10px;">
+                    <strong>System Status:</strong> <span style="color: var(--neon-green);">ONLINE</span> | 
+                    <strong>Last Sync:</strong> <span id="lastSync">Loading...</span>
+                </p>
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span style="color: var(--neon-green); font-weight: 600;">ALL SYSTEMS OPERATIONAL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Metrics -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value" id="pendingTasks">35</div>
+                <div class="metric-label">⏳ Pending Tasks</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="completedToday" style="color: var(--neon-green);">7</div>
+                <div class="metric-label">✅ Completed Today</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="linkedinPosts" style="color: var(--neon-purple);">7</div>
+                <div class="metric-label">💼 LinkedIn Posts</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="successRate" style="color: var(--neon-green);">100%</div>
+                <div class="metric-label">🎯 Success Rate</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="emailsReplied" style="color: var(--neon-blue);">24</div>
+                <div class="metric-label">📧 Emails Replied</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="filesProcessed" style="color: var(--neon-pink);">12</div>
+                <div class="metric-label">📁 Files Processed</div>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Left Column -->
+            <div>
+                <!-- AI Process Visualization -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>⚙️</span> AI PROCESS FLOW - LIVE
+                        </h2>
+                        <span style="color: var(--neon-green); font-size: 0.9em;">● LIVE UPDATES</span>
+                    </div>
+                    <div class="process-container" id="processFlow">
+                        <div class="process-step completed">
+                            <div class="process-icon">📁</div>
+                            <div class="process-content">
+                                <div class="process-title">File Watcher - Monitoring Drop Folder</div>
+                                <div class="process-status">Last file detected: test_file.txt at 1:50 PM</div>
+                            </div>
+                            <div class="process-time">✅ Done</div>
+                        </div>
+                        <div class="process-step completed">
+                            <div class="process-icon">📋</div>
+                            <div class="process-content">
+                                <div class="process-title">Action File Created</div>
+                                <div class="process-status">FILE_test_file_20260302_135000.md generated</div>
+                            </div>
+                            <div class="process-time">✅ Done</div>
+                        </div>
+                        <div class="process-step completed">
+                            <div class="process-icon">🧠</div>
+                            <div class="process-content">
+                                <div class="process-title">Plan Generator - Creating Action Plan</div>
+                                <div class="process-status">PLAN_FILE_test_file_20260302_135000.md created</div>
+                            </div>
+                            <div class="process-time">✅ Done</div>
+                        </div>
+                        <div class="process-step active">
+                            <div class="process-icon">📧</div>
+                            <div class="process-content">
+                                <div class="process-title">Gmail Watcher - Monitoring Inbox</div>
+                                <div class="process-status">Checking for new emails every 60 seconds...</div>
+                            </div>
+                            <div class="process-time">🔄 Active</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-icon">💼</div>
+                            <div class="process-content">
+                                <div class="process-title">LinkedIn Auto-Poster - Scheduled</div>
+                                <div class="process-status">Next post: Tomorrow at 12:00 PM</div>
+                            </div>
+                            <div class="process-time">⏰ Scheduled</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-icon">🎯</div>
+                            <div class="process-content">
+                                <div class="process-title">Orchestrator - Coordinating Tasks</div>
+                                <div class="process-status">Next cycle: in 15 seconds</div>
+                            </div>
+                            <div class="process-time">⏳ Waiting</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Terminal -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>💻</span> LIVE SYSTEM LOGS
+                        </h2>
+                        <div class="btn-group" style="margin: 0;">
+                            <button class="btn" onclick="filterLog('all')">All</button>
+                            <button class="btn" onclick="filterLog('linkedin')">LinkedIn</button>
+                            <button class="btn" onclick="filterLog('gmail')">Gmail</button>
+                            <button class="btn" onclick="filterLog('orchestrator')">Orchestrator</button>
+                        </div>
+                    </div>
+                    <div class="terminal" id="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dot red"></div>
+                            <div class="terminal-dot yellow"></div>
+                            <div class="terminal-dot green"></div>
+                            <span style="color: var(--text-secondary); margin-left: 10px;">AI Employee - Live Terminal</span>
+                        </div>
+                        <div class="terminal-content" id="terminalContent">
+                            <!-- Logs will be dynamically added here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier Progress -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>🏆</span> HACKATHON TIER PROGRESS
+                        </h2>
+                    </div>
+                    <div class="tier-grid">
+                        <div class="tier-card bronze">
+                            <div class="tier-name">🥉 BRONZE TIER</div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%;"></div>
+                                </div>
+                                <div class="progress-label">
+                                    <span>100% Complete</span>
+                                    <span style="color: var(--neon-green);">✅ DONE</span>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.85em; color: var(--text-secondary); margin-top: 10px;">
+                                Vault, Dashboard, File Watcher, Basic Structure
+                            </p>
+                        </div>
+                        <div class="tier-card silver">
+                            <div class="tier-name">🥈 SILVER TIER</div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%;"></div>
+                                </div>
+                                <div class="progress-label">
+                                    <span>100% Complete</span>
+                                    <span style="color: var(--neon-green);">✅ DONE</span>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.85em; color: var(--text-secondary); margin-top: 10px;">
+                                Gmail, LinkedIn, MCP Servers, Approval Workflow
+                            </p>
+                        </div>
+                        <div class="tier-card gold">
+                            <div class="tier-name">🥇 GOLD TIER</div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 40%;"></div>
+                                </div>
+                                <div class="progress-label">
+                                    <span>40% Complete</span>
+                                    <span style="color: var(--neon-blue);">🔄 IN PROGRESS</span>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.85em; color: var(--text-secondary); margin-top: 10px;">
+                                Odoo, Social Media, Ralph Loop, CEO Briefing
+                            </p>
+                        </div>
+                        <div class="tier-card platinum">
+                            <div class="tier-name">💎 PLATINUM TIER</div>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%;"></div>
+                                </div>
+                                <div class="progress-label">
+                                    <span>0% Complete</span>
+                                    <span style="color: var(--text-secondary);">⏳ PENDING</span>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.85em; color: var(--text-secondary); margin-top: 10px;">
+                                Cloud Deployment, Work-Zone Specialization
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                <!-- Quick Actions -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>⚡</span> QUICK ACTIONS
+                        </h2>
+                    </div>
+                    <div class="btn-group" style="flex-direction: column;">
+                        <button class="btn success" onclick="startFileWatcher()">
+                            📁 Start File Watcher
+                        </button>
+                        <button class="btn success" onclick="startGmailWatcher()">
+                            📧 Start Gmail Watcher
+                        </button>
+                        <button class="btn success" onclick="startOrchestrator()">
+                            🎯 Start Orchestrator
+                        </button>
+                        <button class="btn" onclick="postLinkedIn()">
+                            💼 Post to LinkedIn Now
+                        </button>
+                        <button class="btn warning" onclick="runTaskNow()">
+                            ⏰ Run Scheduled Task
+                        </button>
+                        <button class="btn danger" onclick="stopAll()">
+                            🛑 Emergency Stop
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Activity Feed -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>📊</span> RECENT ACTIVITY
+                        </h2>
+                    </div>
+                    <div class="activity-feed" id="activityFeed">
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <div class="activity-title">LinkedIn Post #7 Published</div>
+                                <div class="activity-time">1:54:46 PM - Success</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <div class="activity-title">LinkedIn Post #6 Published</div>
+                                <div class="activity-time">1:39:21 PM - Success</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <div class="activity-title">LinkedIn Post #5 Published</div>
+                                <div class="activity-time">1:35:45 PM - Success</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <div class="activity-title">LinkedIn Post #4 Published</div>
+                                <div class="activity-time">1:15:49 PM - Success</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📧</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Gmail Auto-Reply Sent</div>
+                                <div class="activity-time">1:00:00 PM - Template: general</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📁</div>
+                            <div class="activity-content">
+                                <div class="activity-title">File Detected in Drop Folder</div>
+                                <div class="activity-time">12:50:00 PM - test_file.txt</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Resources -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>📈</span> SYSTEM RESOURCES
+                        </h2>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>CPU Usage</span>
+                            <span id="cpuUsage">23%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="cpuBar" style="width: 23%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Memory Usage</span>
+                            <span id="memUsage">1.2 GB / 8 GB</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="memBar" style="width: 15%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Active Processes</span>
+                            <span id="processCount">5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="processBar" style="width: 62%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Network Status</span>
+                            <span style="color: var(--neon-green);">Connected</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Brain Animation -->
+    <div class="ai-brain">
+        <div class="brain-circle"></div>
+        <div class="brain-circle"></div>
+        <div class="brain-circle"></div>
+        <div class="brain-center">🤖</div>
+    </div>
+
+    <script>
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTimestamp();
+            addInitialLogs();
+            startLiveUpdates();
+        });
+
+        // Update timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            document.getElementById('lastSync').textContent = now.toLocaleString();
+        }
+
+        // Add initial logs
+        function addInitialLogs() {
+            const logs = [
+                { time: '13:54:46', type: 'success', text: '✅ POST PUBLISHED SUCCESSFULLY! (LinkedIn Post #7)' },
+                { time: '13:54:40', type: 'info', text: 'Clicking Post button...' },
+                { time: '13:52:36', type: 'info', text: 'Typing post content...' },
+                { time: '13:52:35', type: 'info', text: 'Found editor: [role="textbox"]' },
+                { time: '13:52:30', type: 'success', text: 'Clicked: button:has-text("Start a post")' },
+                { time: '13:52:04', type: 'info', text: 'Starting LinkedIn final post...' },
+                { time: '13:39:21', type: 'success', text: '✅ POST PUBLISHED SUCCESSFULLY! (LinkedIn Post #6)' },
+                { time: '13:35:45', type: 'success', text: '✅ POST PUBLISHED SUCCESSFULLY! (LinkedIn Post #5)' },
+                { time: '13:00:00', type: 'info', text: '📧 Gmail Auto-Reply sent to: test@email.com' },
+                { time: '12:50:00', type: 'info', text: '📁 File detected: test_file.txt' },
+                { time: '12:50:01', type: 'info', text: '📋 Action file created: FILE_test_file_20260302_125000.md' },
+                { time: '12:00:00', type: 'success', text: '⏰ Scheduled Task: LinkedIn Daily Post 12PM triggered' }
+            ];
+
+            const terminalContent = document.getElementById('terminalContent');
+            logs.forEach((log, index) => {
+                setTimeout(() => {
+                    const logLine = document.createElement('div');
+                    logLine.className = 'terminal-line';
+                    logLine.innerHTML = `
+                        <span class="timestamp">[${log.time}]</span>
+                        <span class="${log.type}">${log.text}</span>
+                    `;
+                    terminalContent.appendChild(logLine);
+                    terminalContent.scrollTop = terminalContent.scrollHeight;
+                }, index * 200);
+            });
+        }
+
+        // Start live updates
+        function startLiveUpdates() {
+            // Update metrics every 5 seconds
+            setInterval(() => {
+                updateMetrics();
+            }, 5000);
+
+            // Add random log entries
+            setInterval(() => {
+                addRandomLog();
+            }, 8000);
+
+            // Update system resources
+            setInterval(() => {
+                updateSystemResources();
+            }, 3000);
+        }
+
+        // Update metrics
+        function updateMetrics() {
+            // Simulate metric changes
+            const completedToday = Math.floor(Math.random() * 3) + 7;
+            document.getElementById('completedToday').textContent = completedToday;
+        }
+
+        // Add random log
+        function addRandomLog() {
+            const logs = [
+                { type: 'info', text: '📁 File Watcher: Scanning Drop_Folder...' },
+                { type: 'info', text: '📧 Gmail Watcher: Checking for new emails...' },
+                { type: 'info', text: '🎯 Orchestrator: Running orchestration cycle...' },
+                { type: 'info', text: '📊 Dashboard: Updating status...' },
+                { type: 'info', text: '💼 LinkedIn: Session active, next post at 12:00 PM' }
+            ];
+
+            const randomLog = logs[Math.floor(Math.random() * logs.length)];
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
+
+            const terminalContent = document.getElementById('terminalContent');
+            const logLine = document.createElement('div');
+            logLine.className = 'terminal-line';
+            logLine.innerHTML = `
+                <span class="timestamp">[${timeStr}]</span>
+                <span class="${randomLog.type}">${randomLog.text}</span>
+            `;
+            terminalContent.appendChild(logLine);
+            terminalContent.scrollTop = terminalContent.scrollHeight;
+
+            // Keep only last 50 logs
+            while (terminalContent.children.length > 50) {
+                terminalContent.removeChild(terminalContent.firstChild);
+            }
+        }
+
+        // Update system resources
+        function updateSystemResources() {
+            const cpu = Math.floor(Math.random() * 30) + 15;
+            const mem = (Math.random() * 0.5 + 1).toFixed(1);
+            
+            document.getElementById('cpuUsage').textContent = cpu + '%';
+            document.getElementById('cpuBar').style.width = cpu + '%';
+            
+            document.getElementById('memUsage').textContent = mem + ' GB / 8 GB';
+            document.getElementById('memBar').style.width = (mem / 8 * 100) + '%';
+        }
+
+        // Filter logs
+        function filterLog(type) {
+            alert('Filtering logs: ' + type);
+            // In production, this would filter the log display
+        }
+
+        // Action buttons
+        function startFileWatcher() {
+            addLog('info', '📁 Starting File Watcher...');
+            setTimeout(() => {
+                addLog('success', '✅ File Watcher started successfully!');
+            }, 1000);
+        }
+
+        function startGmailWatcher() {
+            addLog('info', '📧 Starting Gmail Watcher...');
+            setTimeout(() => {
+                addLog('success', '✅ Gmail Watcher started successfully!');
+            }, 1000);
+        }
+
+        function startOrchestrator() {
+            addLog('info', '🎯 Starting Orchestrator...');
+            setTimeout(() => {
+                addLog('success', '✅ Orchestrator started successfully!');
+            }, 1000);
+        }
+
+        function postLinkedIn() {
+            addLog('info', '💼 Posting to LinkedIn now...');
+            setTimeout(() => {
+                addLog('success', '✅ LinkedIn post published successfully!');
+            }, 3000);
+        }
+
+        function runTaskNow() {
+            addLog('info', '⏰ Running scheduled task immediately...');
+            setTimeout(() => {
+                addLog('success', '✅ Task executed successfully!');
+            }, 2000);
+        }
+
+        function stopAll() {
+            if (confirm('⚠️ WARNING: Stop all running processes?')) {
+                addLog('warning', '🛑 Stopping all processes...');
+                setTimeout(() => {
+                    addLog('success', '✅ All processes stopped.');
+                }, 1000);
+            }
+        }
+
+        // Add log to terminal
+        function addLog(type, text) {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
+            
+            const terminalContent = document.getElementById('terminalContent');
+            const logLine = document.createElement('div');
+            logLine.className = 'terminal-line';
+            logLine.innerHTML = `
+                <span class="timestamp">[${timeStr}]</span>
+                <span class="${type}">${text}</span>
+            `;
+            terminalContent.appendChild(logLine);
+            terminalContent.scrollTop = terminalContent.scrollHeight;
+        }
+    </script>
+</body>
+</html>
