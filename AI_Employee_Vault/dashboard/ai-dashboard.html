@@ -33,7 +33,6 @@
             line-height: 1.5;
         }
 
-        /* Animated background */
         body::before {
             content: '';
             position: fixed;
@@ -54,7 +53,6 @@
             50% { opacity: 1; }
         }
 
-        /* Grid pattern */
         body::after {
             content: '';
             position: fixed;
@@ -75,7 +73,6 @@
             padding: 15px;
         }
 
-        /* Header */
         .header {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.95));
             border: 1px solid rgba(0, 243, 255, 0.3);
@@ -168,7 +165,6 @@
             50% { opacity: 0.5; transform: scale(1.2); }
         }
 
-        /* Metrics Grid */
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -208,10 +204,9 @@
             letter-spacing: 0.5px;
         }
 
-        /* Main Grid */
         .main-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 1.5fr 1fr;
             gap: 15px;
             margin-bottom: 15px;
         }
@@ -222,7 +217,6 @@
             }
         }
 
-        /* Cards */
         .card {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.95));
             border: 1px solid rgba(0, 243, 255, 0.2);
@@ -265,7 +259,6 @@
             font-weight: 600;
         }
 
-        /* Process Flow */
         .process-container {
             display: flex;
             flex-direction: column;
@@ -340,7 +333,6 @@
             font-weight: 600;
         }
 
-        /* Terminal */
         .terminal {
             background: #0d1117;
             border: 1px solid rgba(0, 243, 255, 0.25);
@@ -348,7 +340,7 @@
             padding: 12px;
             font-family: 'Courier New', 'Consolas', monospace;
             font-size: 0.75em;
-            height: 300px;
+            height: 280px;
             overflow-y: auto;
         }
 
@@ -403,7 +395,6 @@
         .terminal-line .warning { color: var(--neon-pink); }
         .terminal-line .error { color: #ff5f56; }
 
-        /* Progress Bars */
         .progress-container {
             margin: 12px 0;
         }
@@ -431,7 +422,6 @@
             transition: width 1s ease;
         }
 
-        /* Tier Cards */
         .tier-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -462,7 +452,6 @@
         .tier-card.gold .tier-name { color: #ffd700; }
         .tier-card.platinum .tier-name { color: #e5e4e2; }
 
-        /* Buttons */
         .btn-group {
             display: flex;
             flex-wrap: wrap;
@@ -493,7 +482,6 @@
         .btn.warning { background: linear-gradient(135deg, var(--neon-pink), #db2777); }
         .btn.danger { background: linear-gradient(135deg, #ef4444, #dc2626); }
 
-        /* Activity Feed */
         .activity-feed {
             max-height: 350px;
             overflow-y: auto;
@@ -544,7 +532,6 @@
             color: var(--neon-blue);
         }
 
-        /* Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -563,7 +550,6 @@
             background: var(--neon-green);
         }
 
-        /* AI Brain */
         .ai-brain {
             position: fixed;
             bottom: 20px;
@@ -597,7 +583,6 @@
             font-size: 1.5em;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             body {
                 font-size: 13px;
@@ -653,7 +638,7 @@
             }
 
             .terminal {
-                height: 250px;
+                height: 220px;
                 font-size: 0.7em;
             }
 
@@ -819,13 +804,16 @@
                         <div class="terminal-content" id="terminalContent"></div>
                     </div>
                 </div>
+            </div>
 
+            <!-- Right Column -->
+            <div>
                 <!-- Tiers -->
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title"><span>🏆</span> TIER PROGRESS</h2>
                     </div>
-                    <div class="tier-grid">
+                    <div class="tier-grid" style="grid-template-columns: 1fr;">
                         <div class="tier-card bronze">
                             <div class="tier-name">🥉 Bronze</div>
                             <div class="progress-container">
@@ -856,14 +844,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Right Column -->
-            <div>
                 <!-- Actions -->
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title"><span>⚡</span> ACTIONS</h2>
+                        <h2 class="card-title"><span>⚡</span> QUICK ACTIONS</h2>
                     </div>
                     <div class="btn-group" style="flex-direction: column;">
                         <button class="btn success" onclick="startFileWatcher()">📁 File Watcher</button>
@@ -878,7 +863,7 @@
                 <!-- Activity -->
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title"><span>📈</span> ACTIVITY</h2>
+                        <h2 class="card-title"><span>📈</span> RECENT ACTIVITY</h2>
                     </div>
                     <div class="activity-feed" id="activityFeed">
                         <div class="activity-item">
@@ -916,29 +901,6 @@
                                 <div class="activity-time">12:50 PM</div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Resources -->
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-title"><span>📊</span> RESOURCES</h2>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-label"><span>CPU</span><span id="cpuUsage">23%</span></div>
-                        <div class="progress-bar"><div class="progress-fill" id="cpuBar" style="width: 23%;"></div></div>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-label"><span>Memory</span><span id="memUsage">1.2/8 GB</span></div>
-                        <div class="progress-bar"><div class="progress-fill" id="memBar" style="width: 15%;"></div></div>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-label"><span>Processes</span><span id="processCount">5</span></div>
-                        <div class="progress-bar"><div class="progress-fill" id="processBar" style="width: 62%;"></div></div>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress-label"><span>Network</span><span style="color: var(--neon-green);">Connected</span></div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
                     </div>
                 </div>
             </div>
@@ -1020,15 +982,6 @@
                 terminalContent.scrollTop = terminalContent.scrollHeight;
                 while (terminalContent.children.length > 50) terminalContent.removeChild(terminalContent.firstChild);
             }, 8000);
-
-            setInterval(() => {
-                const cpu = Math.floor(Math.random() * 30) + 15;
-                const mem = (Math.random() * 0.5 + 1).toFixed(1);
-                document.getElementById('cpuUsage').textContent = cpu + '%';
-                document.getElementById('cpuBar').style.width = cpu + '%';
-                document.getElementById('memUsage').textContent = mem + '/8 GB';
-                document.getElementById('memBar').style.width = (mem / 8 * 100) + '%';
-            }, 3000);
         }
 
         function startFileWatcher() { addLog('info', '📁 Starting File Watcher...'); setTimeout(() => addLog('success', '✅ File Watcher started!'), 1000); }
