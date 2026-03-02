@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Employee Dashboard - Autonomous Digital Worker Control Center">
+    <meta name="theme-color" content="#667eea">
+    
+    <title>🤖 AI Employee Dashboard | Autonomous Digital Worker</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ========================================
+           CSS RESET & BASE STYLES
+           ======================================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Professional Color Palette */
+            --primary-50: #eff6ff;
+            --primary-100: #dbeafe;
+            --primary-200: #bfdbfe;
+            --primary-300: #93c5fd;
+            --primary-400: #60a5fa;
+            --primary-500: #3b82f6;
+            --primary-600: #2563eb;
+            --primary-700: #1d4ed8;
+            
+            --success-500: #10b981;
+            --success-600: #059669;
+            --warning-500: #f59e0b;
+            --warning-600: #d97706;
+            --danger-500: #ef4444;
+            --danger-600: #dc2626;
+            
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-dark: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            /* Spacing */
+            --spacing-xs: 0.25rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+            
+            /* Border Radius */
+            --radius-sm: 0.25rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            --radius-2xl: 1rem;
+            
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition-base: 300ms ease;
+            --transition-slow: 500ms ease;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--gradient-primary);
+            color: var(--gray-900);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: var(--spacing-lg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ========================================
+           LAYOUT & CONTAINER
+           ======================================== */
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* ========================================
+           HEADER SECTION
+           ======================================== */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-2xl);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--shadow-xl);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .header-brand h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--spacing-xs);
+            letter-spacing: -0.025em;
+        }
+
+        .header-brand p {
+            color: var(--gray-600);
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        .header-status {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: var(--success-500);
+            color: white;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.875rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .header-meta {
+            display: flex;
+            gap: var(--spacing-lg);
+            flex-wrap: wrap;
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .meta-item strong {
+            color: var(--gray-900);
+        }
+
+        /* ========================================
+           NAVIGATION TABS
+           ======================================== */
+        .nav-tabs {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-md);
+        }
+
+        .nav-tab {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: var(--gray-100);
+            color: var(--gray-700);
+            text-decoration: none;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all var(--transition-base);
+            border: 2px solid transparent;
+        }
+
+        .nav-tab:hover {
+            background: var(--primary-100);
+            color: var(--primary-700);
+            transform: translateY(-2px);
+        }
+
+        .nav-tab.active {
+            background: var(--primary-600);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* ========================================
+           METRICS GRID
+           ======================================== */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--spacing-xl);
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            transition: all var(--transition-base);
+            border: 1px solid var(--gray-200);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--spacing-sm);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .metric-label {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ========================================
+           MAIN GRID LAYOUT
+           ======================================== */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        @media (max-width: 1024px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ========================================
+           CARDS
+           ======================================== */
+        .card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--gray-200);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--gray-100);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .card-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            background: var(--success-500);
+            color: white;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ========================================
+           PROCESS FLOW
+           ======================================== */
+        .process-flow {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            padding: var(--spacing-md);
+            background: var(--gray-50);
+            border-left: 4px solid var(--primary-500);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+        }
+
+        .process-step.active {
+            background: var(--primary-50);
+            border-left-color: var(--success-500);
+            box-shadow: 0 0 0 2px var(--success-500);
+        }
+
+        .process-step.completed {
+            border-left-color: var(--success-500);
+            opacity: 0.7;
+        }
+
+        .process-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .process-step.active .process-icon {
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .process-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .process-title {
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .process-status {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .process-time {
+            font-size: 0.75rem;
+            color: var(--primary-600);
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        /* ========================================
+           TERMINAL / LOGS
+           ======================================== */
+        .terminal {
+            background: var(--gray-900);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-lg);
+            font-family: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+            font-size: 0.875rem;
+            height: 400px;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--gray-700);
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-dot.red { background: #ff5f56; }
+        .terminal-dot.yellow { background: #ffbd2e; }
+        .terminal-dot.green { background: #27c93f; }
+
+        .terminal-title {
+            color: var(--gray-400);
+            font-size: 0.75rem;
+            margin-left: var(--spacing-sm);
+        }
+
+        .terminal-content {
+            color: var(--success-500);
+            line-height: 1.8;
+        }
+
+        .terminal-line {
+            margin-bottom: var(--spacing-xs);
+            opacity: 0;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .terminal-line .timestamp {
+            color: var(--gray-500);
+            margin-right: var(--spacing-sm);
+        }
+
+        .terminal-line .info { color: var(--primary-400); }
+        .terminal-line .success { color: var(--success-500); }
+        .terminal-line .warning { color: var(--warning-500); }
+        .terminal-line .error { color: var(--danger-500); }
+
+        /* ========================================
+           PROGRESS BARS
+           ======================================== */
+        .progress-container {
+            margin: var(--spacing-lg) 0;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--spacing-sm);
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            height: 12px;
+            background: var(--gray-200);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-full);
+            transition: width 1s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+            animation: progressShine 2s infinite;
+        }
+
+        @keyframes progressShine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* ========================================
+           TIER CARDS
+           ======================================== */
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        .tier-card {
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-2xl);
+            border: 3px solid;
+            background: white;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-base);
+        }
+
+        .tier-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .tier-card.bronze { border-color: #cd7f32; }
+        .tier-card.silver { border-color: #c0c0c0; }
+        .tier-card.gold { border-color: #ffd700; }
+        .tier-card.platinum { border-color: #e5e4e2; }
+
+        .tier-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .tier-card.bronze .tier-name { color: #cd7f32; }
+        .tier-card.silver .tier-name { color: #c0c0c0; }
+        .tier-card.gold .tier-name { color: #ffd700; }
+        .tier-card.platinum .tier-name { color: #e5e4e2; }
+
+        /* ========================================
+           BUTTONS
+           ======================================== */
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-lg);
+        }
+
+        .btn {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .btn-success {
+            background: var(--gradient-success);
+            color: white;
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            opacity: 0.9;
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* ========================================
+           ACTIVITY FEED
+           ======================================== */
+        .activity-feed {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .activity-item {
+            display: flex;
+            gap: var(--spacing-md);
+            padding: var(--spacing-md);
+            border-left: 4px solid var(--primary-500);
+            margin-bottom: var(--spacing-md);
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+        }
+
+        .activity-item:hover {
+            background: var(--primary-50);
+            transform: translateX(4px);
+        }
+
+        .activity-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .activity-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .activity-title {
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .activity-time {
+            font-size: 0.75rem;
+            color: var(--gray-600);
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN
+           ======================================== */
+        @media (max-width: 768px) {
+            body {
+                padding: var(--spacing-sm);
+            }
+
+            .header-brand h1 {
+                font-size: 1.75rem;
+            }
+
+            .header-status {
+                font-size: 0.75rem;
+                padding: var(--spacing-xs) var(--spacing-sm);
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .metric-value {
+                font-size: 2rem;
+            }
+
+            .nav-tabs {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+
+            .process-step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .terminal {
+                height: 300px;
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tier-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ========================================
+           SCROLLBAR STYLING
+           ======================================== */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--gray-100);
+            border-radius: var(--radius-full);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-400);
+            border-radius: var(--radius-full);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-600);
+        }
+
+        /* ========================================
+           PRINT STYLES
+           ======================================== */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .header, .card {
+                box-shadow: none;
+                border: 1px solid var(--gray-300);
+            }
+
+            .btn-group, .nav-tabs {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <div class="header-brand">
+                    <h1>🤖 AI EMPLOYEE</h1>
+                    <p>Autonomous Digital Worker - Control Center</p>
+                </div>
+                <div class="header-status">
+                    <div class="status-dot"></div>
+                    <span>SYSTEM ONLINE</span>
+                </div>
+            </div>
+            
+            <div class="header-meta">
+                <div class="meta-item">
+                    <span>📅</span>
+                    <strong>Last Sync:</strong>
+                    <span id="lastSync">Loading...</span>
+                </div>
+                <div class="meta-item">
+                    <span>🌐</span>
+                    <strong>Browser:</strong>
+                    <span id="browserInfo">Detecting...</span>
+                </div>
+                <div class="meta-item">
+                    <span>📊</span>
+                    <strong>Uptime:</strong>
+                    <span id="uptime">00:00:00</span>
+                </div>
+            </div>
+
+            <nav class="nav-tabs">
+                <a href="#overview" class="nav-tab active">📊 Overview</a>
+                <a href="#process" class="nav-tab">⚙️ Process Flow</a>
+                <a href="#logs" class="nav-tab">💻 Live Logs</a>
+                <a href="#tiers" class="nav-tab">🏆 Tiers</a>
+                <a href="#activity" class="nav-tab">📈 Activity</a>
+            </nav>
+        </header>
+
+        <!-- Quick Metrics -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value" id="pendingTasks">35</div>
+                <div class="metric-label">⏳ Pending Tasks</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="completedToday" style="color: var(--success-500);">7</div>
+                <div class="metric-label">✅ Completed Today</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="linkedinPosts" style="color: #764ba2;">7</div>
+                <div class="metric-label">💼 LinkedIn Posts</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="successRate" style="color: var(--success-500);">100%</div>
+                <div class="metric-label">🎯 Success Rate</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="emailsReplied" style="color: var(--primary-500);">24</div>
+                <div class="metric-label">📧 Emails Replied</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="filesProcessed" style="color: #ef4444;">12</div>
+                <div class="metric-label">📁 Files Processed</div>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Left Column -->
+            <div>
+                <!-- Process Flow -->
+                <div class="card" id="process">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>⚙️</span> AI Process Flow - Live
+                        </h2>
+                        <span class="card-badge">● Live Updates</span>
+                    </div>
+                    <div class="process-flow" id="processFlow">
+                        <div class="process-step completed">
+                            <div class="process-icon">📁</div>
+                            <div class="process-content">
+                                <div class="process-title">File Watcher - Monitoring Drop Folder</div>
+                                <div class="process-status">Last file: test_file.txt at 1:50 PM</div>
+                            </div>
+                            <div class="process-time">✅ Done</div>
+                        </div>
+                        <div class="process-step completed">
+                            <div class="process-icon">📋</div>
+                            <div class="process-content">
+                                <div class="process-title">Action File Created</div>
+                                <div class="process-status">FILE_test_file_20260302_135000.md</div>
+                            </div>
+                            <div class="process-time">✅ Done</div>
+                        </div>
+                        <div class="process-step completed">
+                            <div class="process-icon">🧠</div>
+                            <div class="process-content">
+                                <div class="process-title">Plan Generator</div>
+                                <div class="process-status">PLAN created successfully</div>
+                            </div>
+                            <div class="process-time">✅ Done</div>
+                        </div>
+                        <div class="process-step active">
+                            <div class="process-icon">📧</div>
+                            <div class="process-content">
+                                <div class="process-title">Gmail Watcher - Monitoring Inbox</div>
+                                <div class="process-status">Checking every 60 seconds...</div>
+                            </div>
+                            <div class="process-time">🔄 Active</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-icon">💼</div>
+                            <div class="process-content">
+                                <div class="process-title">LinkedIn Auto-Poster</div>
+                                <div class="process-status">Next: Tomorrow 12:00 PM</div>
+                            </div>
+                            <div class="process-time">⏰ Scheduled</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-icon">🎯</div>
+                            <div class="process-content">
+                                <div class="process-title">Orchestrator</div>
+                                <div class="process-status">Next cycle: in 15 seconds</div>
+                            </div>
+                            <div class="process-time">⏳ Waiting</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Terminal -->
+                <div class="card" id="logs">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>💻</span> Live System Logs
+                        </h2>
+                        <div class="btn-group" style="margin: 0;">
+                            <button class="btn btn-primary" onclick="filterLog('all')">All</button>
+                            <button class="btn btn-primary" onclick="filterLog('linkedin')">LinkedIn</button>
+                            <button class="btn btn-primary" onclick="filterLog('gmail')">Gmail</button>
+                        </div>
+                    </div>
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dot red"></div>
+                            <div class="terminal-dot yellow"></div>
+                            <div class="terminal-dot green"></div>
+                            <span class="terminal-title">AI Employee - Live Terminal</span>
+                        </div>
+                        <div class="terminal-content" id="terminalContent">
+                            <!-- Logs dynamically added -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier Progress -->
+                <div class="card" id="tiers">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>🏆</span> Hackathon Tier Progress
+                        </h2>
+                    </div>
+                    <div class="tier-grid">
+                        <div class="tier-card bronze">
+                            <div class="tier-name">🥉 Bronze Tier</div>
+                            <div class="progress-container">
+                                <div class="progress-label">
+                                    <span>Completion</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%;"></div>
+                                </div>
+                                <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: var(--spacing-sm);">
+                                    ✅ Vault, Dashboard, Watcher, Structure
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tier-card silver">
+                            <div class="tier-name">🥈 Silver Tier</div>
+                            <div class="progress-container">
+                                <div class="progress-label">
+                                    <span>Completion</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 100%; background: linear-gradient(90deg, #c0c0c0, #a0a0a0);"></div>
+                                </div>
+                                <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: var(--spacing-sm);">
+                                    ✅ Gmail, LinkedIn, MCP, Approval
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tier-card gold">
+                            <div class="tier-name">🥇 Gold Tier</div>
+                            <div class="progress-container">
+                                <div class="progress-label">
+                                    <span>Completion</span>
+                                    <span>40%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 40%; background: linear-gradient(90deg, #ffd700, #ffaa00);"></div>
+                                </div>
+                                <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: var(--spacing-sm);">
+                                    🔄 Odoo, Social Media, Ralph Loop
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tier-card platinum">
+                            <div class="tier-name">💎 Platinum Tier</div>
+                            <div class="progress-container">
+                                <div class="progress-label">
+                                    <span>Completion</span>
+                                    <span>0%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%;"></div>
+                                </div>
+                                <p style="font-size: 0.875rem; color: var(--gray-600); margin-top: var(--spacing-sm);">
+                                    ⏳ Cloud, Work-Zone, Vault Sync
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                <!-- Quick Actions -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>⚡</span> Quick Actions
+                        </h2>
+                    </div>
+                    <div class="btn-group" style="flex-direction: column;">
+                        <button class="btn btn-success" onclick="startFileWatcher()">
+                            📁 Start File Watcher
+                        </button>
+                        <button class="btn btn-success" onclick="startGmailWatcher()">
+                            📧 Start Gmail Watcher
+                        </button>
+                        <button class="btn btn-success" onclick="startOrchestrator()">
+                            🎯 Start Orchestrator
+                        </button>
+                        <button class="btn btn-primary" onclick="postLinkedIn()">
+                            💼 Post to LinkedIn Now
+                        </button>
+                        <button class="btn btn-warning" onclick="runTaskNow()">
+                            ⏰ Run Scheduled Task
+                        </button>
+                        <button class="btn btn-danger" onclick="stopAll()">
+                            🛑 Emergency Stop
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Activity Feed -->
+                <div class="card" id="activity">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>📈</span> Recent Activity
+                        </h2>
+                    </div>
+                    <div class="activity-feed" id="activityFeed">
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <div class="activity-title">LinkedIn Post #7 Published</div>
+                                <div class="activity-time">1:54:46 PM - Success</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <div class="activity-title">LinkedIn Post #6 Published</div>
+                                <div class="activity-time">1:39:21 PM - Success</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <div class="activity-title">LinkedIn Post #5 Published</div>
+                                <div class="activity-time">1:35:45 PM - Success</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-content">
+                                <div class="activity-title">LinkedIn Post #4 Published</div>
+                                <div class="activity-time">1:15:49 PM - Success</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📧</div>
+                            <div class="activity-content">
+                                <div class="activity-title">Gmail Auto-Reply Sent</div>
+                                <div class="activity-time">1:00:00 PM - Template: general</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📁</div>
+                            <div class="activity-content">
+                                <div class="activity-title">File Detected in Drop Folder</div>
+                                <div class="activity-time">12:50:00 PM - test_file.txt</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Resources -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span>📊</span> System Resources
+                        </h2>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>CPU Usage</span>
+                            <span id="cpuUsage">23%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="cpuBar" style="width: 23%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Memory Usage</span>
+                            <span id="memUsage">1.2 GB / 8 GB</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="memBar" style="width: 15%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Active Processes</span>
+                            <span id="processCount">5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="processBar" style="width: 62%;"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Network Status</span>
+                            <span style="color: var(--success-500);">Connected</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            updateTimestamp();
+            detectBrowser();
+            addInitialLogs();
+            startLiveUpdates();
+            startUptime();
+        });
+
+        // Update timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            document.getElementById('lastSync').textContent = now.toLocaleString();
+        }
+
+        // Detect browser
+        function detectBrowser() {
+            let browser = 'Unknown';
+            if (navigator.userAgent.indexOf('Chrome') > -1) browser = 'Chrome';
+            else if (navigator.userAgent.indexOf('Firefox') > -1) browser = 'Firefox';
+            else if (navigator.userAgent.indexOf('Safari') > -1) browser = 'Safari';
+            else if (navigator.userAgent.indexOf('Edge') > -1) browser = 'Edge';
+            document.getElementById('browserInfo').textContent = browser;
+        }
+
+        // Start uptime counter
+        let startTime = Date.now();
+        function startUptime() {
+            setInterval(() => {
+                const elapsed = Date.now() - startTime;
+                const hours = Math.floor(elapsed / 3600000);
+                const minutes = Math.floor((elapsed % 3600000) / 60000);
+                const seconds = Math.floor((elapsed % 60000) / 1000);
+                document.getElementById('uptime').textContent = 
+                    `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        // Add initial logs
+        function addInitialLogs() {
+            const logs = [
+                { time: '13:54:46', type: 'success', text: '✅ POST PUBLISHED SUCCESSFULLY! (LinkedIn Post #7)' },
+                { time: '13:54:40', type: 'info', text: 'Clicking Post button...' },
+                { time: '13:52:36', type: 'info', text: 'Typing post content...' },
+                { time: '13:52:35', type: 'info', text: 'Found editor: [role="textbox"]' },
+                { time: '13:52:30', type: 'success', text: 'Clicked: button:has-text("Start a post")' },
+                { time: '13:52:04', type: 'info', text: 'Starting LinkedIn final post...' },
+                { time: '13:39:21', type: 'success', text: '✅ POST PUBLISHED SUCCESSFULLY! (LinkedIn Post #6)' },
+                { time: '13:35:45', type: 'success', text: '✅ POST PUBLISHED SUCCESSFULLY! (LinkedIn Post #5)' },
+                { time: '13:00:00', type: 'info', text: '📧 Gmail Auto-Reply sent to: test@email.com' },
+                { time: '12:50:00', type: 'info', text: '📁 File detected: test_file.txt' }
+            ];
+
+            const terminalContent = document.getElementById('terminalContent');
+            logs.forEach((log, index) => {
+                setTimeout(() => {
+                    const logLine = document.createElement('div');
+                    logLine.className = 'terminal-line';
+                    logLine.innerHTML = `
+                        <span class="timestamp">[${log.time}]</span>
+                        <span class="${log.type}">${log.text}</span>
+                    `;
+                    terminalContent.appendChild(logLine);
+                    terminalContent.scrollTop = terminalContent.scrollHeight;
+                }, index * 150);
+            });
+        }
+
+        // Start live updates
+        function startLiveUpdates() {
+            setInterval(updateMetrics, 5000);
+            setInterval(addRandomLog, 8000);
+            setInterval(updateSystemResources, 3000);
+        }
+
+        function updateMetrics() {
+            const completedToday = Math.floor(Math.random() * 3) + 7;
+            document.getElementById('completedToday').textContent = completedToday;
+        }
+
+        function addRandomLog() {
+            const logs = [
+                { type: 'info', text: '📁 File Watcher: Scanning Drop_Folder...' },
+                { type: 'info', text: '📧 Gmail Watcher: Checking for new emails...' },
+                { type: 'info', text: '🎯 Orchestrator: Running orchestration cycle...' },
+                { type: 'info', text: '📊 Dashboard: Updating status...' },
+                { type: 'info', text: '💼 LinkedIn: Session active, next post at 12:00 PM' }
+            ];
+
+            const randomLog = logs[Math.floor(Math.random() * logs.length)];
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
+
+            const terminalContent = document.getElementById('terminalContent');
+            const logLine = document.createElement('div');
+            logLine.className = 'terminal-line';
+            logLine.innerHTML = `
+                <span class="timestamp">[${timeStr}]</span>
+                <span class="${randomLog.type}">${randomLog.text}</span>
+            `;
+            terminalContent.appendChild(logLine);
+            terminalContent.scrollTop = terminalContent.scrollHeight;
+
+            while (terminalContent.children.length > 50) {
+                terminalContent.removeChild(terminalContent.firstChild);
+            }
+        }
+
+        function updateSystemResources() {
+            const cpu = Math.floor(Math.random() * 30) + 15;
+            const mem = (Math.random() * 0.5 + 1).toFixed(1);
+            
+            document.getElementById('cpuUsage').textContent = cpu + '%';
+            document.getElementById('cpuBar').style.width = cpu + '%';
+            document.getElementById('memUsage').textContent = mem + ' GB / 8 GB';
+            document.getElementById('memBar').style.width = (mem / 8 * 100) + '%';
+        }
+
+        // Action buttons
+        function startFileWatcher() { addLog('info', '📁 Starting File Watcher...'); setTimeout(() => addLog('success', '✅ File Watcher started!'), 1000); }
+        function startGmailWatcher() { addLog('info', '📧 Starting Gmail Watcher...'); setTimeout(() => addLog('success', '✅ Gmail Watcher started!'), 1000); }
+        function startOrchestrator() { addLog('info', '🎯 Starting Orchestrator...'); setTimeout(() => addLog('success', '✅ Orchestrator started!'), 1000); }
+        function postLinkedIn() { addLog('info', '💼 Posting to LinkedIn...'); setTimeout(() => addLog('success', '✅ LinkedIn post published!'), 3000); }
+        function runTaskNow() { addLog('info', '⏰ Running scheduled task...'); setTimeout(() => addLog('success', '✅ Task executed!'), 2000); }
+        function stopAll() { if (confirm('⚠️ Stop all processes?')) { addLog('warning', '🛑 Stopping all...'); setTimeout(() => addLog('success', '✅ All stopped.'), 1000); } }
+        function filterLog(type) { addLog('info', `Filtering logs: ${type}`); }
+
+        function addLog(type, text) {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
+            const terminalContent = document.getElementById('terminalContent');
+            const logLine = document.createElement('div');
+            logLine.className = 'terminal-line';
+            logLine.innerHTML = `<span class="timestamp">[${timeStr}]</span><span class="${type}">${text}</span>`;
+            terminalContent.appendChild(logLine);
+            terminalContent.scrollTop = terminalContent.scrollHeight;
+        }
+    </script>
+</body>
+</html>

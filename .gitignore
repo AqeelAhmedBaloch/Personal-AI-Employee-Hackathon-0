@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment Variables (SECURITY!)
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs (Too Large)
+Logs/
+*.log
+auto_reply_log.csv
+
+# Personal Data (Privacy)
+Inbox/
+Drop_Folder/
+Needs_Action/
+Plans/
+Pending_Approval/
+Approved/
+Rejected/
+Done/
+Briefings/
+
+# Obsidian
+.obsidian/
+*.canvas
+
+# Browser Sessions (Too Large)
+linkedin_session/
+*.session
+
+# Screenshots (Not Needed)
+mcp_servers/linkedin_mcp/*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Test Files
+test_*.py
+*_test.py
+simple_*.py
+send_*.py
+
+# Temporary Files
+*.tmp
+*.temp
+~*
+*.pyc
+
+# Daily Notes
+2026-*.md
+2027-*.md
+2028-*.md
+
+# Canvas Files
+Untitled*.canvas
