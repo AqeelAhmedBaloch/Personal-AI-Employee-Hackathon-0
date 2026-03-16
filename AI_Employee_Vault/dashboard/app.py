@@ -1,314 +1,310 @@
 #!/usr/bin/env python3
 """
-Personal AI Employee Hackathon-0 Dashboard - Web Interface
+AI Employee Dashboard Backend Server
 
-Simple web dashboard to:
-- View system status
-- Change credentials (Gmail, LinkedIn)
-- Manual controls (start/stop watchers)
-- View logs
-- Post to LinkedIn manually
+Provides real-time API for the dashboard:
+- Start/Stop Gmail Watcher
+- Get email activity logs
+- Send manual emails
+- Get system status
 """
 
-import os
-import sys
-import json
+from flask import Flask, jsonify, request, send_from_directory
+from flask_cors import CORS
 import subprocess
+import threading
+import json
+import os
 from pathlib import Path
 from datetime import datetime
-from flask import Flask, render_template, request, jsonify, redirect, url_for
-from dotenv import load_dotenv, set_key
+import queue
+import time
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.', static_path='')
+CORS(app)
+
+# Global variables
+gmail_watcher_process = None
+activity_log = queue.Queue(maxsize=100)
+system_status = {
+    'gmail_watcher': False,
+    'file_watcher': False,
+    'orchestrator': False,
+    'last_email_check': None,
+    'emails_processed_today': 0,
+    'auto_replies_sent_today': 0
+}
 
 # Paths
 VAULT_PATH = Path(__file__).parent.parent
-MCP_PATH = VAULT_PATH / 'mcp_servers'
-EMAIL_MCP_PATH = MCP_PATH / 'email_mcp'
-LINKEDIN_MCP_PATH = MCP_PATH / 'linkedin_mcp'
 LOGS_PATH = VAULT_PATH / 'Logs'
-
-# Environment files
-EMAIL_ENV = EMAIL_MCP_PATH / '.env'
-LINKEDIN_ENV = LINKEDIN_MCP_PATH / '.env'
+GMAIL_WATCHER_SCRIPT = VAULT_PATH / 'gmail_auto_reply_watcher.py'
 
 
-def get_system_status():
-    """Get current system status."""
-    status = {
-        'watchers': {
-            'file_watcher': False,
-            'gmail_watcher': False,
-            'whatsapp_watcher': False,
-        },
-        'orchestrator': False,
-        'linkedin_auto_post': False,
-    }
+def log_activity(activity_type: str, message: str, details: dict = None):
+    """Log activity for dashboard"""
+    activity_log.put({
+        'timestamp': datetime.now().isoformat(),
+        'type': activity_type,
+        'message': message,
+        'details': details or {}
+    })
     
-    # Check running processes
+    # Also log to file
+    log_file = LOGS_PATH / 'dashboard_activity.json'
     try:
-        result = subprocess.run(['tasklist', '/FI', 'IMAGENAME eq python.exe'], 
-                              capture_output=True, text=True)
-        if 'python.exe' in result.stdout:
-            status['orchestrator'] = True
-    except:
-        pass
-    
-    return status
+        logs = []
+        if log_file.exists():
+            with open(log_file, 'r') as f:
+                logs = json.load(f)
+        
+        logs.append({
+            'timestamp': datetime.now().isoformat(),
+            'type': activity_type,
+            'message': message,
+            'details': details or {}
+        })
+        
+        # Keep last 100 entries
+        logs = logs[-100:]
+        
+        with open(log_file, 'w') as f:
+            json.dump(logs, f, indent=2)
+    except Exception as e:
+        print(f"Error writing to log file: {e}")
 
 
-def get_credentials(env_file):
-    """Get credentials from .env file."""
-    if not env_file.exists():
-        return {}
+def monitor_gmail_watcher():
+    """Monitor Gmail watcher process and log activity"""
+    global system_status
     
-    load_dotenv(env_file)
-    creds = {}
-    
-    with open(env_file, 'r') as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith('#') and '=' in line:
-                key, value = line.split('=', 1)
-                creds[key] = value
-    
-    return creds
-
-
-def save_credentials(env_file, new_creds):
-    """Save credentials to .env file."""
-    env_file.parent.mkdir(parents=True, exist_ok=True)
-    
-    for key, value in new_creds.items():
-        set_key(str(env_file), key, value)
-    
-    return True
-
-
-def get_recent_logs(log_file, lines=50):
-    """Get recent log entries."""
-    if not log_file.exists():
-        return []
-    
-    try:
-        with open(log_file, 'r', encoding='utf-8', errors='ignore') as f:
-            all_lines = f.readlines()
-            return all_lines[-lines:]
-    except:
-        return []
+    while system_status['gmail_watcher']:
+        try:
+            # Check if process is running
+            if gmail_watcher_process and gmail_watcher_process.poll() is not None:
+                system_status['gmail_watcher'] = False
+                log_activity('error', 'Gmail Watcher stopped unexpectedly', {
+                    'return_code': gmail_watcher_process.returncode
+                })
+                break
+            
+            # Read Gmail auto-reply log
+            gmail_log_file = LOGS_PATH / 'gmail_auto_reply.log'
+            if gmail_log_file.exists():
+                try:
+                    with open(gmail_log_file, 'r') as f:
+                        lines = f.readlines()
+                        # Get last 10 lines
+                        for line in lines[-10:]:
+                            if 'INFO' in line:
+                                if 'New email from' in line:
+                                    email_from = line.split('from: ')[-1].strip()
+                                    log_activity('email_received', f'New email received from {email_from}', {
+                                        'from': email_from
+                                    })
+                                    system_status['emails_processed_today'] += 1
+                                elif 'Auto-reply sent' in line:
+                                    email_to = line.split('to: ')[-1].strip()
+                                    log_activity('auto_reply_sent', f'Auto-reply sent to {email_to}', {
+                                        'to': email_to
+                                    })
+                                    system_status['auto_replies_sent_today'] += 1
+                                elif 'Found' in line and 'unread' in line:
+                                    count = line.split('Found ')[-1].split(' unread')[0]
+                                    log_activity('info', f'Checked Gmail - {count} unread emails')
+                    
+                    system_status['last_email_check'] = datetime.now().isoformat()
+                except Exception as e:
+                    print(f"Error reading Gmail log: {e}")
+            
+            time.sleep(5)  # Check every 5 seconds
+            
+        except Exception as e:
+            print(f"Monitor error: {e}")
+            time.sleep(5)
 
 
 @app.route('/')
-def dashboard():
-    """Main dashboard."""
-    status = get_system_status()
+def serve_dashboard():
+    """Serve the dashboard HTML file"""
+    return send_from_directory('.', 'ai-dashboard.html')
+
+
+@app.route('/api/status')
+def get_status():
+    """Get current system status"""
+    return jsonify(system_status)
+
+
+@app.route('/api/activity', methods=['GET'])
+def get_activity():
+    """Get recent activity logs"""
+    logs = []
+    while not activity_log.empty():
+        logs.append(activity_log.get())
     
-    # Get credential status (not actual values for security)
-    email_configured = EMAIL_ENV.exists()
-    linkedin_configured = LINKEDIN_ENV.exists()
+    # Return last 50 activities
+    return jsonify(logs[-50:])
+
+
+@app.route('/api/gmail/start', methods=['POST'])
+def start_gmail_watcher():
+    """Start Gmail Watcher"""
+    global gmail_watcher_process, system_status
     
-    # Get recent logs
-    orchestrator_logs = get_recent_logs(LOGS_PATH / 'orchestrator_{}.log'.format(datetime.now().strftime('%Y%m%d')))
-    gmail_logs = get_recent_logs(LOGS_PATH / 'gmail_auto_reply.log')
-    linkedin_logs = get_recent_logs(LINKEDIN_MCP_PATH / 'linkedin_auto_post.log')
-    
-    return render_template('dashboard.html',
-                         status=status,
-                         email_configured=email_configured,
-                         linkedin_configured=linkedin_configured,
-                         orchestrator_logs=orchestrator_logs,
-                         gmail_logs=gmail_logs,
-                         linkedin_logs=linkedin_logs,
-                         current_time=datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
-
-
-@app.route('/credentials')
-def credentials():
-    """Credentials management page."""
-    email_creds = get_credentials(EMAIL_ENV) if EMAIL_ENV.exists() else {}
-    linkedin_creds = get_credentials(LINKEDIN_ENV) if LINKEDIN_ENV.exists() else {}
-    
-    return render_template('credentials.html',
-                         email_creds=email_creds,
-                         linkedin_creds=linkedin_creds)
-
-
-@app.route('/update_email', methods=['POST'])
-def update_email():
-    """Update Gmail credentials."""
-    new_creds = {
-        'GMAIL_EMAIL_ADDRESS': request.form.get('email', ''),
-        'GMAIL_APP_PASSWORD': request.form.get('password', ''),
-        'DRY_RUN': request.form.get('dry_run', 'true')
-    }
-    
-    save_credentials(EMAIL_ENV, new_creds)
-    
-    return jsonify({'success': True, 'message': 'Gmail credentials updated!'})
-
-
-@app.route('/update_linkedin', methods=['POST'])
-def update_linkedin():
-    """Update LinkedIn credentials."""
-    new_creds = {
-        'LINKEDIN_EMAIL': request.form.get('email', ''),
-        'LINKEDIN_PASSWORD': request.form.get('password', ''),
-        'LINKEDIN_CLIENT_ID': request.form.get('client_id', ''),
-        'LINKEDIN_CLIENT_SECRET': request.form.get('client_secret', ''),
-        'LINKEDIN_ACCESS_TOKEN': request.form.get('access_token', ''),
-        'DRY_RUN': request.form.get('dry_run', 'true')
-    }
-    
-    save_credentials(LINKEDIN_ENV, new_creds)
-    
-    return jsonify({'success': True, 'message': 'LinkedIn credentials updated!'})
-
-
-@app.route('/controls')
-def controls():
-    """Manual controls page."""
-    return render_template('controls.html')
-
-
-@app.route('/start_watcher', methods=['POST'])
-def start_watcher():
-    """Start a watcher."""
-    watcher_type = request.form.get('type')
+    if system_status['gmail_watcher']:
+        return jsonify({'success': False, 'message': 'Already running'})
     
     try:
-        if watcher_type == 'file':
-            subprocess.Popen(['python', 'watchers/filesystem_watcher.py', '.', './Drop_Folder'],
-                           cwd=str(VAULT_PATH))
-        elif watcher_type == 'gmail':
-            subprocess.Popen(['python', 'watchers/gmail_watcher.py', '.'],
-                           cwd=str(VAULT_PATH))
-        elif watcher_type == 'orchestrator':
-            subprocess.Popen(['python', 'orchestrator.py', '.', '--dev-mode'],
-                           cwd=str(VAULT_PATH))
-        
-        return jsonify({'success': True, 'message': f'{watcher_type} watcher started!'})
-    except Exception as e:
-        return jsonify({'success': False, 'message': str(e)})
-
-
-@app.route('/stop_all', methods=['POST'])
-def stop_all():
-    """Stop all Python processes."""
-    try:
-        subprocess.run(['taskkill', '/F', '/IM', 'python.exe'], 
-                      capture_output=True)
-        return jsonify({'success': True, 'message': 'All processes stopped!'})
-    except Exception as e:
-        return jsonify({'success': False, 'message': str(e)})
-
-
-@app.route('/post_linkedin', methods=['POST'])
-def post_linkedin():
-    """Post to LinkedIn now."""
-    post_type = request.form.get('post_type', 'general')
-
-    try:
-        # Use the new simple daily post script
-        result = subprocess.run(
-            ['python', 'mcp_servers/linkedin_mcp/linkedin_simple_daily_post.py'],
+        # Start Gmail watcher
+        gmail_watcher_process = subprocess.Popen(
+            ['python', str(GMAIL_WATCHER_SCRIPT), '60'],
             cwd=str(VAULT_PATH),
-            capture_output=True,
-            text=True,
-            timeout=120
-        )
-
-        if result.returncode == 0:
-            return jsonify({'success': True, 'message': 'Post published to LinkedIn!'})
-        else:
-            return jsonify({'success': False, 'message': result.stderr})
-    except subprocess.TimeoutExpired:
-        return jsonify({'success': False, 'message': 'Posting timed out'})
-    except Exception as e:
-        return jsonify({'success': False, 'message': str(e)})
-
-
-@app.route('/linkedin_task_status')
-def linkedin_task_status():
-    """Get LinkedIn Task Scheduler status."""
-    try:
-        result = subprocess.run(
-            ['schtasks', '/Query', '/TN', 'LinkedIn Daily Post 12PM', '/FO', 'LIST'],
-            capture_output=True,
-            text=True
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
         )
         
-        if result.returncode == 0:
-            # Parse the output
-            lines = result.stdout.strip().split('\n')
-            status = {}
-            for line in lines:
-                if ':' in line:
-                    key, value = line.split(':', 1)
-                    status[key.strip()] = value.strip()
-            
-            return jsonify({'success': True, 'task': status})
-        else:
-            return jsonify({'success': False, 'message': 'Task not found'})
+        system_status['gmail_watcher'] = True
+        
+        # Start monitoring thread
+        monitor_thread = threading.Thread(target=monitor_gmail_watcher, daemon=True)
+        monitor_thread.start()
+        
+        log_activity('success', 'Gmail Watcher started', {
+            'pid': gmail_watcher_process.pid
+        })
+        
+        return jsonify({'success': True, 'message': 'Gmail Watcher started'})
+        
     except Exception as e:
+        log_activity('error', f'Failed to start Gmail Watcher: {str(e)}')
         return jsonify({'success': False, 'message': str(e)})
 
 
-@app.route('/run_linkedin_task_now', methods=['POST'])
-def run_linkedin_task_now():
-    """Run LinkedIn task immediately."""
+@app.route('/api/gmail/stop', methods=['POST'])
+def stop_gmail_watcher():
+    """Stop Gmail Watcher"""
+    global gmail_watcher_process, system_status
+    
+    if not system_status['gmail_watcher']:
+        return jsonify({'success': False, 'message': 'Not running'})
+    
     try:
-        subprocess.run(
-            ['schtasks', '/Run', '/TN', 'LinkedIn Daily Post 12PM'],
-            capture_output=True,
-            text=True
+        gmail_watcher_process.terminate()
+        gmail_watcher_process.wait(timeout=5)
+        system_status['gmail_watcher'] = False
+        
+        log_activity('info', 'Gmail Watcher stopped')
+        
+        return jsonify({'success': True, 'message': 'Gmail Watcher stopped'})
+        
+    except Exception as e:
+        log_activity('error', f'Failed to stop Gmail Watcher: {str(e)}')
+        return jsonify({'success': False, 'message': str(e)})
+
+
+@app.route('/api/email/send', methods=['POST'])
+def send_email():
+    """Send manual email"""
+    data = request.json
+    
+    if not data or 'to' not in data or 'subject' not in data or 'body' not in data:
+        return jsonify({'success': False, 'message': 'Missing required fields'})
+    
+    try:
+        # Import Gmail libraries
+        import smtplib
+        from email.mime.text import MIMEText
+        from dotenv import load_dotenv
+        
+        # Load credentials
+        env_path = VAULT_PATH / 'mcp_servers' / 'email_mcp' / '.env'
+        load_dotenv(env_path)
+        
+        email_address = os.getenv('GMAIL_EMAIL_ADDRESS')
+        app_password = os.getenv('GMAIL_APP_PASSWORD', '').replace(' ', '')
+        
+        if not email_address or not app_password:
+            return jsonify({'success': False, 'message': 'Email credentials not configured'})
+        
+        # Create message
+        msg = MIMEText(data['body'], 'plain')
+        msg['From'] = email_address
+        msg['To'] = data['to']
+        msg['Subject'] = data['subject']
+        
+        # Send email
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(email_address, app_password)
+        server.send_message(msg)
+        server.quit()
+        
+        log_activity('email_sent', f'Manual email sent to {data["to"]}', {
+            'to': data['to'],
+            'subject': data['subject']
+        })
+        
+        return jsonify({'success': True, 'message': 'Email sent successfully'})
+        
+    except Exception as e:
+        log_activity('error', f'Failed to send email: {str(e)}')
+        return jsonify({'success': False, 'message': str(e)})
+
+
+@app.route('/api/orchestrator/start', methods=['POST'])
+def start_orchestrator():
+    """Start Orchestrator"""
+    try:
+        orchestrator_script = VAULT_PATH / 'orchestrator.py'
+        subprocess.Popen(
+            ['python', str(orchestrator_script), '.', '--dev-mode', '--interval', '30'],
+            cwd=str(VAULT_PATH),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
         )
-        return jsonify({'success': True, 'message': 'LinkedIn task started!'})
+        
+        system_status['orchestrator'] = True
+        log_activity('success', 'Orchestrator started')
+        
+        return jsonify({'success': True, 'message': 'Orchestrator started'})
     except Exception as e:
         return jsonify({'success': False, 'message': str(e)})
 
 
-@app.route('/logs')
-def logs():
-    """Logs viewer page."""
-    log_files = list(LOGS_PATH.glob('*.log'))
-    log_files.extend(LINKEDIN_MCP_PATH.glob('*.log'))
-    
-    return render_template('logs.html', log_files=log_files)
-
-
-@app.route('/view_log/<path:log_file>')
-def view_log(log_file):
-    """View specific log file."""
-    full_path = Path(log_file)
-    
-    if not full_path.exists():
-        return jsonify({'error': 'File not found'})
-    
-    content = get_recent_logs(full_path, lines=200)
-    
-    return jsonify({'content': ''.join(content)})
-
-
-@app.route('/refresh_status')
-def refresh_status():
-    """Refresh system status."""
-    status = get_system_status()
-    return jsonify(status)
+@app.route('/api/file-watcher/start', methods=['POST'])
+def start_file_watcher():
+    """Start File Watcher"""
+    try:
+        file_watcher_script = VAULT_PATH / 'watchers' / 'filesystem_watcher.py'
+        subprocess.Popen(
+            ['python', str(file_watcher_script), '.', 'Drop_Folder'],
+            cwd=str(VAULT_PATH),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        
+        system_status['file_watcher'] = True
+        log_activity('success', 'File Watcher started')
+        
+        return jsonify({'success': True, 'message': 'File Watcher started'})
+    except Exception as e:
+        return jsonify({'success': False, 'message': str(e)})
 
 
 if __name__ == '__main__':
-    # Create templates directory
-    templates_dir = Path(__file__).parent / 'templates'
-    templates_dir.mkdir(exist_ok=True)
+    print("=" * 60)
+    print("🤖 AI Employee Dashboard Backend Server")
+    print("=" * 60)
+    print(f"📁 Vault Path: {VAULT_PATH}")
+    print(f"📧 Gmail Watcher: {GMAIL_WATCHER_SCRIPT}")
+    print(f"📊 Logs: {LOGS_PATH}")
+    print("=" * 60)
+    print("🌐 Dashboard URL: http://localhost:5000")
+    print("=" * 60)
     
-    print('=' * 60)
-    print('Personal AI Employee Hackathon-0 Dashboard')
-    print('=' * 60)
-    print('')
-    print('Open in browser:')
-    print('http://localhost:5000')
-    print('')
-    print('Press Ctrl+C to stop')
-    print('=' * 60)
+    # Ensure logs directory exists
+    LOGS_PATH.mkdir(parents=True, exist_ok=True)
     
-    app.run(debug=True, port=5000)
+    # Start server
+    app.run(debug=True, port=5000, host='0.0.0.0')

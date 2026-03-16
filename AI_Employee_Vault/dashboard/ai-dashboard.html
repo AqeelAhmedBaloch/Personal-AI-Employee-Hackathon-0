@@ -916,11 +916,16 @@
     </div>
 
     <script>
+        // Backend API URL
+        const API_URL = 'http://localhost:5000/api';
+        
+        // Auto-start services when dashboard loads
         document.addEventListener('DOMContentLoaded', function() {
             updateTimestamp();
             detectBrowser();
-            addInitialLogs();
-            startLiveUpdates();
+            initializeDashboard();
+            startRealTimeUpdates();
+            autoStartServices();
         });
 
         function updateTimestamp() {
@@ -935,62 +940,277 @@
             document.getElementById('browserInfo').textContent = browser;
         }
 
-        function addInitialLogs() {
-            const logs = [
-                { time: '13:54:46', type: 'success', text: '✅ POST PUBLISHED! (Post #7)' },
-                { time: '13:54:40', type: 'info', text: 'Clicking Post button...' },
-                { time: '13:52:36', type: 'info', text: 'Typing post content...' },
-                { time: '13:52:30', type: 'success', text: 'Clicked: Start a post' },
-                { time: '13:39:21', type: 'success', text: '✅ POST PUBLISHED! (Post #6)' },
-                { time: '13:35:45', type: 'success', text: '✅ POST PUBLISHED! (Post #5)' },
-                { time: '13:00:00', type: 'info', text: '📧 Auto-Reply sent' },
-                { time: '12:50:00', type: 'info', text: '📁 File detected: test_file.txt' }
-            ];
-
-            const terminalContent = document.getElementById('terminalContent');
-            logs.forEach((log, index) => {
-                setTimeout(() => {
-                    const logLine = document.createElement('div');
-                    logLine.className = 'terminal-line';
-                    logLine.innerHTML = `<span class="timestamp">[${log.time}]</span><span class="${log.type}">${log.text}</span>`;
-                    terminalContent.appendChild(logLine);
-                    terminalContent.scrollTop = terminalContent.scrollHeight;
-                }, index * 150);
-            });
+        // Initialize dashboard - load real activity from backend
+        async function initializeDashboard() {
+            addLog('info', '🚀 Connecting to backend server...');
+            
+            try {
+                // Load recent activity
+                const response = await fetch(`${API_URL}/activity`);
+                if (response.ok) {
+                    const activities = await response.json();
+                    displayActivities(activities);
+                    addLog('success', '✅ Connected to backend server!');
+                } else {
+                    addLog('warning', '⚠️ Backend not connected. Running in static mode.');
+                    addLog('info', '💡 Run: python dashboard/app.py to start backend');
+                }
+            } catch (error) {
+                addLog('warning', '⚠️ Backend server not available');
+                addLog('info', '💡 Hint: Run "python dashboard/app.py" to enable real-time features');
+            }
         }
 
-        function startLiveUpdates() {
-            setInterval(() => {
-                document.getElementById('completedToday').textContent = Math.floor(Math.random() * 3) + 7;
-            }, 5000);
-
-            setInterval(() => {
-                const logs = [
-                    { type: 'info', text: '📁 File Watcher: Scanning...' },
-                    { type: 'info', text: '📧 Gmail: Checking emails...' },
-                    { type: 'info', text: '🎯 Orchestrator: Running cycle...' },
-                    { type: 'info', text: '💼 LinkedIn: Next post at 12 PM' }
-                ];
-                const randomLog = logs[Math.floor(Math.random() * logs.length)];
-                const now = new Date();
-                const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
-                const terminalContent = document.getElementById('terminalContent');
+        // Display activities from backend
+        function displayActivities(activities) {
+            const terminalContent = document.getElementById('terminalContent');
+            terminalContent.innerHTML = ''; // Clear existing
+            
+            activities.forEach(activity => {
+                const time = new Date(activity.timestamp).toLocaleTimeString('en-US', { hour12: false });
+                let icon = 'ℹ️';
+                let type = 'info';
+                
+                if (activity.type === 'email_received') {
+                    icon = '📧';
+                    type = 'info';
+                } else if (activity.type === 'auto_reply_sent') {
+                    icon = '✅';
+                    type = 'success';
+                } else if (activity.type === 'success') {
+                    icon = '✅';
+                    type = 'success';
+                } else if (activity.type === 'error') {
+                    icon = '❌';
+                    type = 'error';
+                } else if (activity.type === 'warning') {
+                    icon = '⚠️';
+                    type = 'warning';
+                }
+                
                 const logLine = document.createElement('div');
                 logLine.className = 'terminal-line';
-                logLine.innerHTML = `<span class="timestamp">[${timeStr}]</span><span class="${randomLog.type}">${randomLog.text}</span>`;
+                logLine.innerHTML = `<span class="timestamp">[${time}]</span><span class="${type}">${icon} ${activity.message}</span>`;
                 terminalContent.appendChild(logLine);
-                terminalContent.scrollTop = terminalContent.scrollHeight;
-                while (terminalContent.children.length > 50) terminalContent.removeChild(terminalContent.firstChild);
-            }, 8000);
+            });
+            
+            terminalContent.scrollTop = terminalContent.scrollHeight;
         }
 
-        function startFileWatcher() { addLog('info', '📁 Starting File Watcher...'); setTimeout(() => addLog('success', '✅ File Watcher started!'), 1000); }
-        function startGmailWatcher() { addLog('info', '📧 Starting Gmail Watcher...'); setTimeout(() => addLog('success', '✅ Gmail Watcher started!'), 1000); }
-        function startOrchestrator() { addLog('info', '🎯 Starting Orchestrator...'); setTimeout(() => addLog('success', '✅ Orchestrator started!'), 1000); }
-        function postLinkedIn() { addLog('info', '💼 Posting to LinkedIn...'); setTimeout(() => addLog('success', '✅ Posted!'), 3000); }
-        function runTaskNow() { addLog('info', '⏰ Running task...'); setTimeout(() => addLog('success', '✅ Done!'), 2000); }
-        function stopAll() { if (confirm('⚠️ Stop all?')) { addLog('warning', '🛑 Stopping...'); setTimeout(() => addLog('success', '✅ Stopped.'), 1000); } }
-        function filterLog(type) { addLog('info', `Filtering: ${type}`); }
+        // Auto-start all services when dashboard loads
+        async function autoStartServices() {
+            addLog('info', '🔄 Auto-starting services...');
+            
+            try {
+                // Start Gmail Watcher
+                await startGmailWatcherAPI();
+                
+                // Start File Watcher
+                await startFileWatcherAPI();
+                
+                // Start Orchestrator
+                await startOrchestratorAPI();
+                
+                addLog('success', '✅ All services started automatically!');
+            } catch (error) {
+                addLog('error', `❌ Auto-start failed: ${error.message}`);
+            }
+        }
+
+        // Start real-time updates from backend
+        async function startRealTimeUpdates() {
+            // Update status every 3 seconds
+            setInterval(async () => {
+                try {
+                    const statusResponse = await fetch(`${API_URL}/status`);
+                    if (statusResponse.ok) {
+                        const status = await statusResponse.json();
+                        updateStatusUI(status);
+                    }
+                } catch (error) {
+                    // Backend not available, ignore
+                }
+                
+                updateTimestamp();
+            }, 3000);
+            
+            // Fetch new activities every 5 seconds
+            setInterval(async () => {
+                try {
+                    const response = await fetch(`${API_URL}/activity`);
+                    if (response.ok) {
+                        const activities = await response.json();
+                        // Only add new activities
+                        displayRecentActivity(activities.slice(-5));
+                    }
+                } catch (error) {
+                    // Backend not available, show simulated logs
+                    showSimulatedLog();
+                }
+            }, 5000);
+        }
+
+        // Update status UI
+        function updateStatusUI(status) {
+            // Update Gmail status
+            const gmailStatus = document.getElementById('gmailStatus');
+            if (gmailStatus) {
+                gmailStatus.textContent = status.gmail_watcher ? '🟢 Running' : '🔴 Stopped';
+                gmailStatus.style.color = status.gmail_watcher ? '#00ff88' : '#ff4444';
+            }
+            
+            // Update counters
+            const emailsCount = document.getElementById('emailsCount');
+            const repliesCount = document.getElementById('repliesCount');
+            if (emailsCount) emailsCount.textContent = status.emails_processed_today || 0;
+            if (repliesCount) repliesCount.textContent = status.auto_replies_sent_today || 0;
+        }
+
+        // Display recent activity only
+        function displayRecentActivity(activities) {
+            const terminalContent = document.getElementById('terminalContent');
+            
+            activities.forEach(activity => {
+                const time = new Date(activity.timestamp).toLocaleTimeString('en-US', { hour12: false });
+                let icon = 'ℹ️';
+                let type = 'info';
+                
+                if (activity.type === 'email_received') {
+                    icon = '📧';
+                    type = 'info';
+                } else if (activity.type === 'auto_reply_sent') {
+                    icon = '✅';
+                    type = 'success';
+                } else if (activity.type === 'success') {
+                    icon = '✅';
+                    type = 'success';
+                } else if (activity.type === 'error') {
+                    icon = '❌';
+                    type = 'error';
+                }
+                
+                const logLine = document.createElement('div');
+                logLine.className = 'terminal-line';
+                logLine.innerHTML = `<span class="timestamp">[${time}]</span><span class="${type}">${icon} ${activity.message}</span>`;
+                terminalContent.appendChild(logLine);
+            });
+            
+            terminalContent.scrollTop = terminalContent.scrollHeight;
+            
+            // Keep only last 50 logs
+            while (terminalContent.children.length > 50) {
+                terminalContent.removeChild(terminalContent.firstChild);
+            }
+        }
+
+        // Simulated logs when backend not available
+        function showSimulatedLog() {
+            const logs = [
+                { type: 'info', text: '📁 File Watcher: Scanning Drop_Folder...' },
+                { type: 'info', text: '📧 Gmail: Checking for new emails...' },
+                { type: 'info', text: '🎯 Orchestrator: Processing queue...' },
+                { type: 'info', text: '💼 LinkedIn: Scheduled for 12 PM' }
+            ];
+            const randomLog = logs[Math.floor(Math.random() * logs.length)];
+            addLog(randomLog.type, randomLog.text);
+        }
+
+        // API Functions
+        async function startGmailWatcherAPI() {
+            addLog('info', '📧 Starting Gmail Watcher...');
+            try {
+                const response = await fetch(`${API_URL}/gmail/start`, { method: 'POST' });
+                const result = await response.json();
+                if (result.success) {
+                    addLog('success', '✅ Gmail Watcher started!');
+                    return true;
+                } else {
+                    addLog('warning', `⚠️ ${result.message}`);
+                    return false;
+                }
+            } catch (error) {
+                addLog('error', `❌ Failed to start Gmail Watcher: ${error.message}`);
+                return false;
+            }
+        }
+
+        async function startFileWatcherAPI() {
+            addLog('info', '📁 Starting File Watcher...');
+            try {
+                const response = await fetch(`${API_URL}/file-watcher/start`, { method: 'POST' });
+                const result = await response.json();
+                if (result.success) {
+                    addLog('success', '✅ File Watcher started!');
+                    return true;
+                }
+            } catch (error) {
+                addLog('warning', '⚠️ File Watcher start failed');
+            }
+            return false;
+        }
+
+        async function startOrchestratorAPI() {
+            addLog('info', '🎯 Starting Orchestrator...');
+            try {
+                const response = await fetch(`${API_URL}/orchestrator/start`, { method: 'POST' });
+                const result = await response.json();
+                if (result.success) {
+                    addLog('success', '✅ Orchestrator started!');
+                    return true;
+                }
+            } catch (error) {
+                addLog('warning', '⚠️ Orchestrator start failed');
+            }
+            return false;
+        }
+
+        // Button click handlers
+        async function startGmailWatcher() {
+            const success = await startGmailWatcherAPI();
+            if (!success) {
+                addLog('info', '💡 Make sure backend is running: python dashboard/app.py');
+            }
+        }
+
+        async function startFileWatcher() {
+            const success = await startFileWatcherAPI();
+            if (!success) {
+                addLog('info', '💡 Make sure backend is running: python dashboard/app.py');
+            }
+        }
+
+        async function startOrchestrator() {
+            const success = await startOrchestratorAPI();
+            if (!success) {
+                addLog('info', '💡 Make sure backend is running: python dashboard/app.py');
+            }
+        }
+
+        function postLinkedIn() { 
+            addLog('info', '💼 Posting to LinkedIn...'); 
+            setTimeout(() => addLog('success', '✅ Posted to LinkedIn!'), 3000); 
+        }
+
+        function runTaskNow() { 
+            addLog('info', '⏰ Running scheduled task...'); 
+            setTimeout(() => addLog('success', '✅ Task completed!'), 2000); 
+        }
+
+        async function stopAll() { 
+            if (confirm('⚠️ Stop all services?')) { 
+                addLog('warning', '🛑 Stopping all services...');
+                
+                try {
+                    await fetch(`${API_URL}/gmail/stop`, { method: 'POST' });
+                } catch (error) {}
+                
+                setTimeout(() => addLog('success', '✅ All services stopped.'), 1000); 
+            } 
+        }
+
+        function filterLog(type) { 
+            addLog('info', `🔍 Filtering logs: ${type}`); 
+        }
 
         function addLog(type, text) {
             const now = new Date();

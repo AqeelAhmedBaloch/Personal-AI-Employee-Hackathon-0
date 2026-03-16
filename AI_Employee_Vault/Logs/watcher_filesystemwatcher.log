@@ -223,3 +223,24 @@
 2026-03-02 14:51:47,578 - FileSystemWatcher - INFO - Action file created: FILE_test_20260302_145147.md
 2026-03-02 14:51:47,579 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test_file.txt
 2026-03-02 14:51:47,581 - FileSystemWatcher - INFO - Action file created: FILE_test_file_20260302_145147.md
+2026-03-16 11:58:54,197 - FileSystemWatcher - INFO - FileSystemWatcher initialized
+2026-03-16 11:58:54,208 - FileSystemWatcher - INFO - Vault path: .
+2026-03-16 11:58:54,210 - FileSystemWatcher - INFO - Check interval: 5s
+2026-03-16 11:58:54,210 - FileSystemWatcher - INFO - Drop folder: Drop_Folder
+2026-03-16 11:58:54,211 - FileSystemWatcher - INFO - Starting FileSystemWatcher with real-time observer
+2026-03-16 11:58:54,215 - FileSystemWatcher - INFO - Watching folder: Drop_Folder
+2026-03-16 11:58:54,215 - FileSystemWatcher - INFO - Press Ctrl+C to stop
+2026-03-16 11:58:54,234 - FileSystemWatcher - INFO - Copied file to vault: Inbox\bronze_final_test.txt
+2026-03-16 11:58:54,235 - FileSystemWatcher - INFO - Action file created: FILE_bronze_final_test_20260316_115854.md
+2026-03-16 11:58:54,238 - FileSystemWatcher - INFO - Copied file to vault: Inbox\integration_test.txt
+2026-03-16 11:58:54,239 - FileSystemWatcher - INFO - Action file created: FILE_integration_test_20260316_115854.md
+2026-03-16 11:58:54,241 - FileSystemWatcher - INFO - Copied file to vault: Inbox\perfect_test.txt
+2026-03-16 11:58:54,242 - FileSystemWatcher - INFO - Action file created: FILE_perfect_test_20260316_115854.md
+2026-03-16 11:58:54,253 - FileSystemWatcher - INFO - Copied file to vault: Inbox\plan_test.txt
+2026-03-16 11:58:54,254 - FileSystemWatcher - INFO - Action file created: FILE_plan_test_20260316_115854.md
+2026-03-16 11:58:54,255 - FileSystemWatcher - INFO - Copied file to vault: Inbox\silver_test.txt
+2026-03-16 11:58:54,257 - FileSystemWatcher - INFO - Action file created: FILE_silver_test_20260316_115854.md
+2026-03-16 11:58:54,259 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test.txt
+2026-03-16 11:58:54,260 - FileSystemWatcher - INFO - Action file created: FILE_test_20260316_115854.md
+2026-03-16 11:58:54,262 - FileSystemWatcher - INFO - Copied file to vault: Inbox\test_file.txt
+2026-03-16 11:58:54,263 - FileSystemWatcher - INFO - Action file created: FILE_test_file_20260316_115854.md
