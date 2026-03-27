@@ -29,3 +29,5 @@ timestamp,to,subject,template,status
 2026-03-16T12:39:23.367557,Google <no-reply@accounts.google.com>,"Security alert",default,success
 2026-03-16T12:40:30.425087,Aqeel Ahmed <aqeelwork2025@gmail.com>,"AI Employee",invoice_inquiry,success
 2026-03-16T13:52:04.690274,Murtaza Shabbir <murtuzasitabkhan@gmail.com>,"Quotation Required",default,success
+2026-03-27T18:50:13.365470,Aqeel Ahmed <aqeelwork2025@gmail.com>,"Testing Email AI",invoice_inquiry,success
+2026-03-27T19:41:58.134536,GitHub <noreply@github.com>,"[GitHub] A third-party GitHub Application has been added to your account",support_ticket,success
