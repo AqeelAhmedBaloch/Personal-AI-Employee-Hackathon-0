@@ -1,0 +1,184 @@
+{
+  "sync_policy": {
+    "version": "1.0.0",
+    "description": "Platinum Tier Vault Sync Rules",
+    "last_updated": "2026-03-27"
+  },
+  
+  "never_sync": {
+    "description": "Files and folders that MUST NEVER sync to cloud",
+    "patterns": [
+      ".env",
+      ".env.*",
+      "*.env",
+      "credentials.json",
+      "service_account.json",
+      "*.pem",
+      "*.key",
+      "*.crt",
+      "session/*",
+      "sessions/*",
+      "*.session",
+      "browser_profile/",
+      "chrome_profile/",
+      "playwright_profiles/",
+      "banking_credentials.json",
+      "payment_tokens.json",
+      "whatsapp_session/",
+      "oauth_tokens.json",
+      "tokens/",
+      "auth/",
+      "local_config.json",
+      "local_secrets.json"
+    ],
+    "reason": "Contains secrets, credentials, tokens, or session data"
+  },
+  
+  "always_sync": {
+    "description": "File types that are safe to sync",
+    "patterns": [
+      "*.md",
+      "*.json",
+      "*.yaml",
+      "*.yml",
+      "*.py",
+      "*.js",
+      "*.html",
+      "*.css",
+      "*.txt",
+      "*.csv",
+      "*.bat",
+      "*.sh"
+    ],
+    "reason": "Code, configuration, and documentation files"
+  },
+  
+  "folder_rules": {
+    "Needs_Action/": {
+      "sync": true,
+      "subfolders": {
+        "cloud/": { "sync": true, "owner": "cloud_agent" },
+        "local/": { "sync": true, "owner": "local_agent" },
+        "shared/": { "sync": true, "owner": "both" }
+      }
+    },
+    
+    "In_Progress/": {
+      "sync": true,
+      "subfolders": {
+        "cloud_agent/": { "sync": true, "owner": "cloud_agent" },
+        "local_agent/": { "sync": true, "owner": "local_agent" }
+      }
+    },
+    
+    "Plans/": {
+      "sync": true,
+      "owner": "both"
+    },
+    
+    "Pending_Approval/": {
+      "sync": true,
+      "owner": "both"
+    },
+    
+    "Approved/": {
+      "sync": true,
+      "owner": "both"
+    },
+    
+    "Done/": {
+      "sync": true,
+      "owner": "both"
+    },
+    
+    "Updates/": {
+      "sync": true,
+      "direction": "cloud_to_local",
+      "owner": "cloud_writes"
+    },
+    
+    "Signals/": {
+      "sync": true,
+      "direction": "cloud_to_local",
+      "owner": "cloud_writes"
+    },
+    
+    "Dashboard.md": {
+      "sync": true,
+      "writer": "local_only",
+      "reason": "Single-writer rule to prevent conflicts"
+    },
+    
+    "Company_Handbook.md": {
+      "sync": true,
+      "writer": "both"
+    },
+    
+    "Business_Goals.md": {
+      "sync": true,
+      "writer": "both"
+    },
+    
+    "Logs/": {
+      "sync": false,
+      "reason": "May contain sensitive data, keep local"
+    },
+    
+    "Accounting/": {
+      "sync": false,
+      "reason": "Financial data, keep local only"
+    }
+  },
+  
+  "claim_by_move_rule": {
+    "enabled": true,
+    "description": "First agent to move item from Needs_Action to In_Progress/<agent>/ owns it",
+    "rule": {
+      "source": "Needs_Action/{domain}/",
+      "destination": "In_Progress/{agent}/",
+      "ownership": "exclusive",
+      "other_agents_must": "ignore",
+      "completion_action": "move to Done/"
+    },
+    "implementation": {
+      "step1": "Agent checks if file exists in In_Progress/<any_agent>/",
+      "step2": "If exists, skip (already claimed)",
+      "step3": "If not exists, move to In_Progress/<self>/",
+      "step4": "Now owns the task",
+      "step5": "On completion, move to Done/ and release ownership"
+    }
+  },
+  
+  "single_writer_rules": {
+    "Dashboard.md": {
+      "writer": "local_agent",
+      "reader": "both",
+      "cloud_action": "write to Updates/Dashboard_Update.md",
+      "local_action": "merge Updates/ into Dashboard.md"
+    }
+  },
+  
+  "conflict_resolution": {
+    "strategy": "last_writer_wins_with_backup",
+    "backup_prefix": ".conflict_backup_",
+    "notify_on_conflict": true,
+    "preferred_writer": {
+      "Dashboard.md": "local_agent",
+      "Company_Handbook.md": "human",
+      "Business_Goals.md": "human"
+    }
+  },
+  
+  "security_audit": {
+    "check_before_sync": true,
+    "scan_for_patterns": [
+      "password",
+      "secret",
+      "token",
+      "api_key",
+      "credential",
+      "private_key"
+    ],
+    "action_on_detection": "reject_and_alert"
+  }
+}

@@ -206,15 +206,106 @@
 
         .main-grid {
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 15px;
             margin-bottom: 15px;
+            align-items: start;
         }
 
         @media (max-width: 900px) {
             .main-grid {
                 grid-template-columns: 1fr;
             }
+        }
+
+        /* Equal height columns */
+        .main-grid > div {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-grid .card {
+            flex: 0 0 auto;
+        }
+
+        /* Specific card heights for balance */
+        #processFlow { max-height: 320px; }
+        #terminal { max-height: 320px; }
+        #activityFeed { max-height: 320px; }
+        
+        /* Tier cards compact */
+        .tier-card {
+            padding: 8px;
+            margin-bottom: 8px;
+            min-height: auto;
+            max-height: 100px;
+        }
+
+        .tier-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .tier-card .progress-container {
+            margin: 5px 0;
+        }
+
+        .tier-card .progress-label {
+            font-size: 0.75em;
+            margin-bottom: 3px;
+        }
+
+        .tier-card .progress-bar {
+            height: 6px;
+        }
+
+        .tier-name {
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+
+        /* Quick Actions buttons compact */
+        .btn-group .btn {
+            padding: 6px 10px;
+            font-size: 0.7em;
+            min-height: 35px;
+        }
+
+        /* Equal height for all cards in right column */
+        .tier-card {
+            margin-bottom: 15px;
+        }
+
+        /* Process step fixed height */
+        .process-step {
+            min-height: 70px;
+        }
+
+        /* Activity item fixed height */
+        .activity-item {
+            min-height: 60px;
+        }
+
+        /* Terminal fixed height */
+        .terminal {
+            flex: 1;
+            min-height: 250px;
+            max-height: 400px;
+        }
+
+        /* Activity feed fixed height */
+        .activity-feed {
+            flex: 1;
+            min-height: 250px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        /* Tier grid */
+        .tier-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
         }
 
         .card {
@@ -224,6 +315,14 @@
             padding: 15px;
             margin-bottom: 15px;
             box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
         }
 
         .card-header {
@@ -620,6 +719,7 @@
 
             .card {
                 padding: 12px;
+                min-height: 180px;
             }
 
             .card-title {
@@ -629,6 +729,7 @@
             .process-step {
                 padding: 8px;
                 font-size: 0.8em;
+                min-height: 60px;
             }
 
             .process-icon {
@@ -640,6 +741,10 @@
             .terminal {
                 height: 220px;
                 font-size: 0.7em;
+            }
+
+            .activity-feed {
+                min-height: 200px;
             }
 
             .tier-grid {
@@ -686,6 +791,7 @@
                     <div><span>📅</span> <strong>Last Sync:</strong> <span id="lastSync">Loading...</span></div>
                     <div><span>🌐</span> <strong>Browser:</strong> <span id="browserInfo">Detecting...</span></div>
                     <div><span>⚡</span> <strong>Status:</strong> <span style="color: var(--neon-green);">ONLINE</span></div>
+                    <div><span>🏆</span> <strong>Progress:</strong> <span style="color: var(--neon-green);">Gold 100% + Platinum 50%</span></div>
                 </div>
                 <div class="status-badge">
                     <div class="status-dot"></div>
@@ -719,6 +825,14 @@
             <div class="metric-card">
                 <div class="metric-value" id="filesProcessed" style="color: var(--neon-pink);">12</div>
                 <div class="metric-label">📁 Files</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="financeTransactions" style="color: var(--neon-green);">20</div>
+                <div class="metric-label">💰 Transactions</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="platinumFeatures" style="color: var(--neon-purple);">3/6</div>
+                <div class="metric-label">💎 Platinum</div>
             </div>
         </div>
 
@@ -804,61 +918,6 @@
                         <div class="terminal-content" id="terminalContent"></div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Right Column -->
-            <div>
-                <!-- Tiers -->
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-title"><span>🏆</span> TIER PROGRESS</h2>
-                    </div>
-                    <div class="tier-grid" style="grid-template-columns: 1fr;">
-                        <div class="tier-card bronze">
-                            <div class="tier-name">🥉 Bronze</div>
-                            <div class="progress-container">
-                                <div class="progress-label"><span>Complete</span><span>100%</span></div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
-                            </div>
-                        </div>
-                        <div class="tier-card silver">
-                            <div class="tier-name">🥈 Silver</div>
-                            <div class="progress-container">
-                                <div class="progress-label"><span>Complete</span><span>100%</span></div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
-                            </div>
-                        </div>
-                        <div class="tier-card gold">
-                            <div class="tier-name">🥇 Gold</div>
-                            <div class="progress-container">
-                                <div class="progress-label"><span>Complete</span><span>40%</span></div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 40%;"></div></div>
-                            </div>
-                        </div>
-                        <div class="tier-card platinum">
-                            <div class="tier-name">💎 Platinum</div>
-                            <div class="progress-container">
-                                <div class="progress-label"><span>Complete</span><span>0%</span></div>
-                                <div class="progress-bar"><div class="progress-fill" style="width: 0%;"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Actions -->
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-title"><span>⚡</span> QUICK ACTIONS</h2>
-                    </div>
-                    <div class="btn-group" style="flex-direction: column;">
-                        <button class="btn success" onclick="startFileWatcher()">📁 File Watcher</button>
-                        <button class="btn success" onclick="startGmailWatcher()">📧 Gmail Watcher</button>
-                        <button class="btn success" onclick="startOrchestrator()">🎯 Orchestrator</button>
-                        <button class="btn" onclick="postLinkedIn()">💼 Post LinkedIn</button>
-                        <button class="btn warning" onclick="runTaskNow()">⏰ Run Task</button>
-                        <button class="btn danger" onclick="stopAll()">🛑 Stop All</button>
-                    </div>
-                </div>
 
                 <!-- Activity -->
                 <div class="card">
@@ -900,6 +959,119 @@
                                 <div class="activity-title">File Detected</div>
                                 <div class="activity-time">12:50 PM</div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+                <!-- Tiers -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title"><span>🏆</span> TIER PROGRESS</h2>
+                    </div>
+                    <div class="tier-grid" style="grid-template-columns: 1fr;">
+                        <div class="tier-card bronze">
+                            <div class="tier-name">🥉 Bronze</div>
+                            <div class="progress-container">
+                                <div class="progress-label"><span>Complete</span><span>100%</span></div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="tier-card silver">
+                            <div class="tier-name">🥈 Silver</div>
+                            <div class="progress-container">
+                                <div class="progress-label"><span>Complete</span><span>100%</span></div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="tier-card gold">
+                            <div class="tier-name">🥇 Gold</div>
+                            <div class="progress-container">
+                                <div class="progress-label"><span>Complete</span><span>100%</span></div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="tier-card platinum">
+                            <div class="tier-name">💎 Platinum</div>
+                            <div class="progress-container">
+                                <div class="progress-label"><span>Complete</span><span>50%</span></div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 50%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title"><span>⚡</span> QUICK ACTIONS</h2>
+                    </div>
+                    <div class="btn-group" style="flex-direction: column;">
+                        <button class="btn success" onclick="startFileWatcher()">📁 File Watcher</button>
+                        <button class="btn success" onclick="startGmailWatcher()">📧 Gmail Watcher</button>
+                        <button class="btn success" onclick="startOrchestrator()">🎯 Orchestrator</button>
+                        <button class="btn" onclick="postLinkedIn()">💼 Post LinkedIn</button>
+                        <button class="btn warning" onclick="runTaskNow()">⏰ Run Task</button>
+                        <button class="btn danger" onclick="stopAll()">🛑 Stop All</button>
+                    </div>
+                </div>
+
+                <!-- Platinum Features -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title"><span>💎</span> PLATINUM FEATURES</h2>
+                        <span class="card-badge">● IN PROGRESS</span>
+                    </div>
+                    <div class="process-container" id="platinumFeatures">
+                        <div class="process-step completed">
+                            <div class="process-icon">☁️</div>
+                            <div class="process-content">
+                                <div class="process-title">Cloud Agent Architecture</div>
+                                <div class="process-status">Design complete</div>
+                            </div>
+                            <div class="process-time">✅</div>
+                        </div>
+                        <div class="process-step completed">
+                            <div class="process-icon">🔒</div>
+                            <div class="process-content">
+                                <div class="process-title">Security Policy</div>
+                                <div class="process-status">Secrets never sync</div>
+                            </div>
+                            <div class="process-time">✅</div>
+                        </div>
+                        <div class="process-step completed">
+                            <div class="process-icon">🎯</div>
+                            <div class="process-content">
+                                <div class="process-title">Claim-by-Move Rule</div>
+                                <div class="process-status">claim_manager.py ready</div>
+                            </div>
+                            <div class="process-time">✅</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-icon">🖥️</div>
+                            <div class="process-content">
+                                <div class="process-title">Cloud VM Deployment</div>
+                                <div class="process-status">Oracle/AWS setup pending</div>
+                            </div>
+                            <div class="process-time">⏳</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-icon">🔄</div>
+                            <div class="process-content">
+                                <div class="process-title">Git Vault Sync</div>
+                                <div class="process-status">Configuration ready</div>
+                            </div>
+                            <div class="process-time">⏳</div>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-icon">💬</div>
+                            <div class="process-content">
+                                <div class="process-title">A2A Communication</div>
+                                <div class="process-status">Not started</div>
+                            </div>
+                            <div class="process-time">⏳</div>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,21 @@
+Date,Description,Amount,Balance,Category
+2026-03-25,Client Payment - ABC Corp,5000.00,15000.00,Income
+2026-03-24,Office Rent,-2000.00,10000.00,Expenses
+2026-03-23,Netflix Subscription,-15.99,12000.00,Entertainment
+2026-03-22,Late Fee - Credit Card,-35.00,12016.00,Fees
+2026-03-21,Client Payment - XYZ Ltd,3500.00,12051.00,Income
+2026-03-20,Adobe Creative Cloud,-54.99,8551.00,Software
+2026-03-19,Office Supplies,-150.00,8606.00,Expenses
+2026-03-18,Spotify Premium,-9.99,8756.00,Entertainment
+2026-03-17,Client Payment - Tech Co,2500.00,8766.00,Income
+2026-03-16,AWS Cloud Services,-250.00,6266.00,Infrastructure
+2026-03-15,Slack Subscription,-12.50,6516.00,Software
+2026-03-14,Overdraft Fee,-35.00,6528.50,Fees
+2026-03-13,Client Lunch,-85.00,6563.50,Meals
+2026-03-12,Microsoft 365,-22.00,6648.50,Software
+2026-03-11,Client Payment - StartupXYZ,1500.00,6670.50,Income
+2026-03-10,Internet Bill,-79.99,5170.50,Utilities
+2026-03-09,Notion Pro,-10.00,5250.49,Software
+2026-03-08,Electric Bill,-200.00,5260.49,Utilities
+2026-03-07,Zoom Subscription,-15.00,5460.49,Software
+2026-03-06,Client Payment - MegaCorp,7500.00,5475.49,Income

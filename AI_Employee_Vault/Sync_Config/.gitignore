@@ -1,0 +1,88 @@
+# Platinum Tier - Security Configuration
+# CRITICAL: Never sync these files to cloud!
+
+# Environment files (contain secrets)
+.env
+.env.*
+*.env
+credentials.json
+service_account.json
+*.pem
+*.key
+*.crt
+
+# Session files
+session/*
+sessions/*
+*.session
+*.session-journal
+
+# Browser profiles with saved credentials
+browser_profile/
+chrome_profile/
+playwright_profiles/
+
+# Banking/Payment credentials
+banking_credentials.json
+payment_tokens.json
+whatsapp_session/
+
+# OAuth tokens
+oauth_tokens.json
+tokens/
+auth/
+
+# Local-only configuration
+local_config.json
+local_secrets.json
+
+# IDE and system files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs (may contain sensitive data)
+Logs/*.log
+Logs/*credentials*
+Logs/*password*
+Logs/*token*
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Platinum Tier Specific Rules
+# ============================
+
+# Cloud agent should NEVER have:
+Cloud_Agent/.env
+Cloud_Agent/credentials.json
+Cloud_Agent/whatsapp_session/
+Cloud_Agent/banking_credentials/
+
+# Local agent secrets (never sync to cloud)
+Local_Agent/.env
+Local_Agent/credentials.json
+Local_Agent/whatsapp_session/
+Local_Agent/banking_credentials/
+Local_Agent/payment_tokens/
+
+# Sync config itself is safe
+# Sync_Config/ can be synced
+
+# Demo files are safe
+# Platinum_Demo/ can be synced

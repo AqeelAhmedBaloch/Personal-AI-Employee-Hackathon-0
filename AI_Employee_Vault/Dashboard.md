@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-03-16T13:58:37.828020
+last_updated: 2026-03-27T18:46:19.498725
 status: active
 ---
 
@@ -14,7 +14,7 @@ status: active
 
 | Metric | Value |
 |--------|-------|
-| Pending Tasks | 56 |
+| Pending Tasks | 174 |
 | Awaiting Approval | 0 |
 | Completed Today | 0 |
 | Revenue MTD | $0 |
@@ -26,7 +26,7 @@ status: active
 | Folder            | Count |
 | ----------------- | ----- |
 | /Inbox            | 7 |
-| /Needs_Action     | 56 |
+| /Needs_Action     | 174 |
 | /Pending_Approval | 0 |
 
 ---
